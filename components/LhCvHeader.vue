@@ -33,7 +33,7 @@
 
     img {
       max-height: 100%;
-      border-radius: 4px 0 0 4px;
+      border-radius: 4px 0 0 0;
     }
 
     h1 {
