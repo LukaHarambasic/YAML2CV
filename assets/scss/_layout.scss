@@ -1,0 +1,23 @@
+body {
+  font-family: $ff;
+  line-height: 1.4;
+  background: $c-secondary; //TODO: should be removed for transition testing
+}
+
+main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+.container-out {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  .container-in {
+    width: $desktop;
+  }
+}

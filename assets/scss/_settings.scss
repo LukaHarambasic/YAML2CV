@@ -1,0 +1,51 @@
+/*
+* Variable names are inspired by tailwind.css
+* e.g. ff = fontfamily; fs = fontsize; fs-xs = fontsize-xs
+* --------------------------------------------
+* Sizing has 4 properties: xs, s, l, xl; if no no size is applied it would be a m and it is the default value.
+ */
+
+/*
+* Sizes
+ */
+$s-xxs: 0.25rem;
+$s-xs: 0.5rem;
+$s-s:  0.8rem;
+$s:    1rem;
+$s-m:  1.2rem;
+$s-l:  1.5rem;
+$s-xl: 2rem;
+
+/*
+* Fonts
+ */
+//font family
+$ff: 'Open Sans', sans-serif;
+
+//font size
+$fs-xs: $s-xs;
+$fs-s:  $s-s;
+$fs:    $s;
+$fs-m:  $s-m;
+$fs-l:  $s-l;
+$fs-xl: $s-xl;
+
+/*
+* Colors
+ */
+$c-primary:        #2E2E3E;
+$c-primary-shadow: rgba(18,18,24, 0.3);
+$c-secondary:      #E2EBF0;
+$c-accent:         #DF1C4B;
+$c-white:          #ffffff;
+$c-grey:           #cccccc;
+$c-black:          #000000;
+
+/*
+* Breakpoints
+ */
+$desktop: $s * 62;
+$tablet:  $s * 36;
+$mobile:  $s * 24;
+
+
