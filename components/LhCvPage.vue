@@ -23,7 +23,7 @@ export default {
 .page {
   position: relative;
   background: $c-white;
-  box-shadow: 0 0 40px #cccccc; //TODO: change to opacity version from primary
+  box-shadow: 0 0 40px $c-primary-shadow;
   border-radius: 4px; //TODO: radius to var
   width: $s * 49.625;
   height: $s * 71.25;
@@ -34,6 +34,13 @@ export default {
   justify-content: space-between;
   align-content: flex-start;
   flex-wrap: wrap;
+
+  @media print {
+    margin: 0;
+    background: tomato;
+    width: 100%;
+  }
+
   &.first {
     background: linear-gradient(
         to bottom,

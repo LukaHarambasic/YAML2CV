@@ -69,6 +69,7 @@
   justify-content: center;
   padding: $s-s 0;
   border-radius: 0 0 4px 4px;
+
   .logo {
     position: absolute;
     top: 0;
@@ -80,32 +81,40 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     border-radius: 50%;
     transition: all 1s ease-in;
+
     &:hover {
       transform: rotate(360deg);
     }
   }
+
   ul {
     align-self: center;
     margin: 0;
     list-style: none;
     display: flex;
+
     li {
       margin-right: $s/2;
+
       &::after {
         content: "•";
         margin-left: $s/2;
       }
+
       &:last-of-type {
         margin: 0;
+
         &::after {
           content: "";
           margin: 0;
         }
       }
+
       a {
         color: $c-secondary;
         transition: all 250ms ease-out;
         text-decoration: none;
+
         &:hover {
           text-decoration: underline; //TODO: to boarder for animation
         }
@@ -113,4 +122,5 @@
     }
   }
 }
+/*Created by Luka Harambasic :) Feel free to to what ever you want, but if you are a nice person you leave my name somewhere in the CSS comments :D*/
 </style>

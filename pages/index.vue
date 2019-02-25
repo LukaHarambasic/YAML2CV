@@ -2,12 +2,8 @@
   <section class="container-in">
     <lh-cv-page
       :isFirst="true">
-      <header class="header">
-        <img src="../static/profile.jpg" />
-        <h1>
-          <span v-text="cv.name.last" /><br/>
-          <span v-text="cv.name.first" /></h1>
-      </header>
+      <LhCvHeader
+        :name="cv.name" />
       <div class="main">
         <LhCvList
           :title="'Experience'"
@@ -25,7 +21,7 @@
           :title="'Software'"
           :items="cv.skills.software" />
         <LhCvSkills
-          :title="'Others'"
+          :title="'Other'"
           :items="cv.skills.others" />
         <LhCvSkills
           :title="'Languages'"
@@ -50,6 +46,7 @@
 import LhCvPage from '~/components/LhCvPage.vue'
 import LhCvList from '~/components/LhCvList.vue'
 import LhCvSkills from '~/components/LhCvSkills.vue'
+import LhCvHeader from '~/components/LhCvHeader.vue'
 import LhCvFooter from '~/components/LhCvFooter.vue'
 import cv from '~/assets/cv.yml'
 
@@ -59,6 +56,7 @@ export default {
     LhCvPage,
     LhCvList,
     LhCvSkills,
+    LhCvHeader,
     LhCvFooter
   },
   data() {
@@ -70,37 +68,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.header {
-  background: $c-white;
-  /*box-shadow: 0px 0px 10px $c-primary-shadow;*/
-  border-radius: 4px;
-  width: 100%;
-  height: 20%;
-  margin: 0 0 ($s * 2) 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-
-  img {
-    max-height: 100%;
-    border-radius: 4px 0 0 4px;
-  }
-
-  h1 {
-    color: $c-primary;
-    font-size: 4rem;
-    margin: $s 0 0 $s-xl;
-    width: 100%;
-    line-height: 1;
-  }
-}
-
 .main {
   width: 65%;
 }
 
 .skills {
   width: 30%;
+  
   h2 {
     color: $c-primary;
     text-align: left;
