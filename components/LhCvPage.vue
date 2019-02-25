@@ -37,22 +37,28 @@ export default {
 
   @media print {
     margin: 0;
-    background: tomato;
-    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    height: 1078px;
+    width: 794px;
   }
 
   &.first {
     background: linear-gradient(
-        to bottom,
-        $c-primary 0%,
-        $c-primary 20%,
-        #000000 20%,
-        $c-white 20%,
-        $c-white 100%
+      to bottom,
+      $c-primary 0%,
+      $c-primary 20%,
+      #000000 20%,
+      $c-white 20%,
+      $c-white 100%
     );
   }
   &:last-of-type {
     margin-bottom: ($s * 6);
+
+    @media print {
+      margin: 0;
+    }
   }
 }
 </style>

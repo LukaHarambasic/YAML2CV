@@ -95,12 +95,3 @@ module.exports = {
     }
   }
 }
-
-function generateProjects() {
-  const fileNames = fs.readdirSync('./content/portfolio/').map((file) => file.substring(0, file.length -3))
-  const fileContents = fileNames.map((fileName) => fs.readFileSync('./content/portfolio/' + fileName + '.md', 'utf8'))
-  return fileNames.map((name, index) => {
-    const frontMatter = fm(fileContents[ index ])
-    return frontMatter.attributes
-  })
-}

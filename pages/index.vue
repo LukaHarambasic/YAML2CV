@@ -74,7 +74,7 @@ export default {
 
 .skills {
   width: 30%;
-  
+
   h2 {
     color: $c-primary;
     text-align: left;

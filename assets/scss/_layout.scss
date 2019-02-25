@@ -1,7 +1,7 @@
 body {
   font-family: $ff;
   line-height: 1.4;
-  background: $c-secondary; //TODO: should be removed for transition testing
+  background: $c-secondary;
 }
 
 main {
@@ -19,5 +19,11 @@ main {
 
   .container-in {
     width: $desktop;
+
+    @media print {
+      margin: 0;
+      display: block;
+      width: auto;
+    }
   }
 }

@@ -82,6 +82,10 @@
     border-radius: 50%;
     transition: all 1s ease-in;
 
+    @media print {
+      right: $s*2;
+    }
+
     &:hover {
       transform: rotate(360deg);
     }
