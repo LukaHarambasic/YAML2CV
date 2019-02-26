@@ -46,8 +46,8 @@ export default {
   &.first {
     background: linear-gradient(
       to bottom,
-      $c-primary 0%,
-      $c-primary 20%,
+      $c-accent 0%,
+      $c-accent 20%,
       #000000 20%,
       $c-white 20%,
       $c-white 100%
