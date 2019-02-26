@@ -76,10 +76,21 @@ export default {
   width: 30%;
 
   h2 {
+    position: relative;
     color: $c-primary;
     text-align: left;
     margin: 0 0 $s-xs 0;
     font-weight: 600;
+
+    &:after {
+      position: absolute;
+      content: ' ';
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 3rem;
+      background: $c-accent;
+    }
   }
 }
 </style>

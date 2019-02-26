@@ -31,7 +31,7 @@ export default {
 
 <style lang="scss" scoped>
 .list {
-  margin: 0 0 0 $s-xs;
+  margin: 0;
   h3 {
     font-weight: 600;
     font-size: 1rem;

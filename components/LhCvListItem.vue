@@ -63,7 +63,7 @@ li {
   flex-flow: column wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  margin: 0 0 $s-l 0;
+  margin: 0 0 $s-s 0;
   text-align: left;
   width: 100%;
   &:last-of-type {
@@ -83,7 +83,7 @@ li {
       margin: 0;
       display: inline-block;
       font-weight: 600;
-      font-size: $fs-m;
+      font-size: $fs;
     }
     .position {
     }

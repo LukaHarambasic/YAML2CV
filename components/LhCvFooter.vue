@@ -80,7 +80,7 @@
     margin-right: $s;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     border-radius: 50%;
-    transition: all 1s ease-in;
+    transition: all 0.7s ease;
 
     @media print {
       right: $s*2;
