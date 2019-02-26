@@ -1,5 +1,7 @@
 # YAML2CV
 
+[DEMO](https://zealous-hermann-781626.netlify.com/)
+
 ## Customize the CV
 1. Go to `assets/cv.yml` and edit the file so that it fit your life and not mine :)
 2. Change the image in `static/profile.jpg`
