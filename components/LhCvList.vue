@@ -53,9 +53,8 @@ export default {
       content: ' ';
       bottom: 0;
       left: 0;
-      height: 2px;
       width: 3rem;
-      background: $c-accent;
+      border-bottom: 2px solid $c-accent;
     }
   }
 

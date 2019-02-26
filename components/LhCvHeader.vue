@@ -3,7 +3,7 @@
     <img src="../static/profile.jpg" />
     <h1>
       <span v-text="name.last" /><br/>
-      <span v-text="name.first" /></h1>
+      <span class="firstname" v-text="name.first" /></h1>
   </header>
 </template>
 
@@ -42,6 +42,18 @@
       margin: $s 0 0 $s-xl;
       width: 100%;
       line-height: 1;
+
+      .firstname {
+        position: relative;
+        &:after {
+          position: absolute;
+          content: ' ';
+          bottom: 0;
+          left: 0;
+          width: 3rem;
+          border-bottom: 2px solid $c-accent;
+        }
+      }
     }
   }
 </style>
