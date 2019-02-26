@@ -24,7 +24,7 @@
 4. Select `Save as PDF` as print destination
 5. And that's it :)
 
-## Use it on production server
+## Use it on production server - not needed
 
 ### Run on a server
 1. `npm run build`
@@ -34,5 +34,10 @@
 1. `npm run generate`
 2. copy the files from the dist folder
 
+## ToDos
+[] add responsiveness
+[] explain how to add new informations
+[] add field for address and telephone
+ 
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
