@@ -39,5 +39,5 @@
 - [ ] explain how to add new informations
 - [ ] add field for address and telephone
  
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+## Technology
+This project uses [Vue.js](https://vuejs.org/) in [Nuxt.js](https://nuxtjs.org). 
