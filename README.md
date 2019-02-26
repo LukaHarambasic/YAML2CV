@@ -35,9 +35,9 @@
 2. copy the files from the dist folder
 
 ## ToDos
-[] add responsiveness
-[] explain how to add new informations
-[] add field for address and telephone
+- [ ] add responsiveness
+- [ ] explain how to add new informations
+- [ ] add field for address and telephone
  
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
