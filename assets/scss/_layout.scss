@@ -4,6 +4,12 @@ body {
   background: $c-secondary;
 }
 
+@media print {
+  body {
+    font-size: 12pt;
+  }
+}
+
 main {
   position: absolute;
   top: 0;
