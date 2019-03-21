@@ -2,11 +2,11 @@
   <section
     class="list">
     <h3
-      v-if="title"
-      v-text="title" />
+      v-if="object.title"
+      v-text="object.title" />
     <ul>
       <li
-        v-for="(item, index) in items"
+        v-for="(item, index) in object.items"
         :key="index"
         v-text="item" />
     </ul>
@@ -15,15 +15,11 @@
 
 <script>
 export default {
-  name: 'LhCvSkillSet',
+  name: 'LhCvSkills',
   props: {
-    title: {
+    object: {
       required: true,
-      type: String
-    },
-    items: {
-      required: true,
-      type: Array
+      type: Object
     }
   }
 }
@@ -36,9 +32,6 @@ export default {
     font-weight: 600;
     font-size: 1rem;
     margin: 0;
-  }
-  &:not(:first-of-type) {
-    /*margin-top: $s_default;*/
   }
   ul {
     list-style: none;

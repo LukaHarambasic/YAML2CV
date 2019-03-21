@@ -38,7 +38,7 @@ export default {
   position: relative;
   background: $c-white;
   box-shadow: 0 0 40px $c-primary-shadow;
-  border-radius: 4px; //TODO: radius to var
+  border-radius: $radius;
   width: $s * 49.625;
   height: $s * 71.25;
   padding: ($s * 4) ($s * 3) ($s * 3) ($s * 3);
@@ -48,7 +48,6 @@ export default {
   justify-content: space-between;
   align-content: flex-start;
   flex-wrap: wrap;
-
   @media print {
     margin: 0;
     border-radius: 0;
@@ -56,7 +55,6 @@ export default {
     height: 1078px;
     width: 794px;
   }
-
   &.first {
     background: linear-gradient(
       to bottom,
@@ -67,10 +65,8 @@ export default {
       $c-white 100%
     );
   }
-
   &:last-of-type {
     margin-bottom: ($s * 6);
-
     @media print {
       margin: 0;
     }

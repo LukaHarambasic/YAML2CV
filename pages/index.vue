@@ -1,48 +1,38 @@
 <template>
-  <section class="container-in">
+  <section 
+    class="container-in">
     <lh-cv-page
       :isFirst="true"
       :settings="cv.settings"
       :footer="cv.footer">
       <lh-cv-header
         :name="cv.name" />
-      <div class="main">
+      <div 
+        class="main">
         <lh-cv-list
-          :title="'Education'"
-          :items="cv.education"
+          v-if="cv.education.items"
+          :object="cv.education"
           :settings="cv.settings" />
         <lh-cv-list
-          :title="'Experience'"
-          :items="cv.experienceFirstPage"
+          v-if="cv.experienceFirstPage.items"
+          :object="cv.experienceFirstPage"
           :settings="cv.settings" />
       </div>
-      <aside class="skills">
-        <h2>Skills</h2>
-        <lh-cv-skills
-          :title="'Development'"
-          :items="cv.skills.development" />
-        <lh-cv-skills
-          :title="'Software'"
-          :items="cv.skills.software" />
-        <lh-cv-skills
-          :title="'Other'"
-          :items="cv.skills.others" />
-        <lh-cv-skills
-          :title="'Languages'"
-          :items="cv.skills.languages" />
-      </aside>
+      <lh-cv-skills-list 
+        class="skills"
+        v-if="cv.skills.items"
+        :object="cv.skills" />
     </lh-cv-page>
     <lh-cv-page
       :settings="cv.settings"
       :footer="cv.footer">
       <lh-cv-list
-        v-if="cv.experienceSecondPage"
-        :title="''"
-        :items="cv.experienceSecondPage"
+        v-if="cv.experienceSecondPage.items"
+        :object="cv.experienceSecondPage"
         :settings="cv.settings" />
       <lh-cv-list
-        :title="'Voluntary Work'"
-        :items="cv.voluntary"
+        v-if="cv.voluntary.items"
+        :object="cv.voluntary"
         :settings="cv.settings" />
     </lh-cv-page>
   </section>
@@ -51,7 +41,7 @@
 <script>
 import LhCvPage from '~/components/LhCvPage.vue'
 import LhCvList from '~/components/LhCvList.vue'
-import LhCvSkills from '~/components/LhCvSkills.vue'
+import LhCvSkillsList from '~/components/LhCvSkillsList.vue'
 import LhCvHeader from '~/components/LhCvHeader.vue'
 import cv from '~/assets/cv.yml'
 
@@ -60,7 +50,7 @@ export default {
   components: {
     LhCvPage,
     LhCvList,
-    LhCvSkills,
+    LhCvSkillsList,
     LhCvHeader
   },
   data() {
@@ -75,26 +65,7 @@ export default {
 .main {
   width: 65%;
 }
-
 .skills {
   width: 30%;
-
-  h2 {
-    position: relative;
-    color: $c-primary;
-    text-align: left;
-    margin: 0 0 $s-xs 0;
-    font-weight: 600;
-
-    &:after {
-      position: absolute;
-      content: ' ';
-      bottom: 0;
-      left: 0;
-      height: 2px;
-      width: 3rem;
-      background: $c-accent;
-    }
-  }
 }
 </style>

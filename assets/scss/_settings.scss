@@ -6,23 +6,23 @@
  */
 
 /*
-* Sizes
+* Sizes (s)
  */
 $s-xxs: 0.25rem;
-$s-xs: 0.5rem;
-$s-s:  0.8rem;
-$s:    1rem;
-$s-m:  1.2rem;
-$s-l:  1.5rem;
-$s-xl: 2rem;
+$s-xs:  0.5rem;
+$s-s:   0.8rem;
+$s:     1rem;
+$s-m:   1.2rem;
+$s-l:   1.5rem;
+$s-xl:  2rem;
 
 /*
 * Fonts
  */
-//font family
+//font family (ff)
 $ff: 'Open Sans', sans-serif;
 
-//font size
+//font size (fs)
 $fs-xs: $s-xs;
 $fs-s:  $s-s;
 $fs:    $s;
@@ -31,7 +31,7 @@ $fs-l:  $s-l;
 $fs-xl: $s-xl * 2;
 
 /*
-* Colors
+* Colors (c)
  */
 $c-primary:        #2E2E3E;
 $c-primary-shadow: rgba(18,18,24, 0.3);
@@ -48,4 +48,7 @@ $desktop: $s * 62;
 $tablet:  $s * 36;
 $mobile:  $s * 24;
 
-
+/*
+* Border-Radius
+ */
+$radius: 4px;

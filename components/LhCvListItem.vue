@@ -1,5 +1,6 @@
 <template>
-  <li>
+  <li
+    v-if="item">
     <div
       v-if="item.title || item.position"
       class="header">
@@ -35,7 +36,7 @@
     <p
       v-if="item.description"
       v-html="item.description"
-      :class="{ justify: settings.justifyDescription }"
+      :class="{ justify: justifyDescription }"
       class="description" />
   </li>
 </template>
@@ -48,9 +49,9 @@ export default {
       required: true,
       type: Object
     },
-    settings: {
-      required: true,
-      type: Object
+    justifyDescription: {
+      default: false,
+      type: Boolean
     }
   },
   computed: {
