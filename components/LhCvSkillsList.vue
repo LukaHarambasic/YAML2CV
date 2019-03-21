@@ -1,9 +1,9 @@
 <template>
   <aside>
-    <h2
+    <lh-cv-list-headline
       v-if="object.title"
       v-text="object.title" />
-    <LhCvSkills
+    <lh-cv-skills
       class="skillsList"
       v-for="(object, index) in object.items"
       :key="index"
@@ -13,10 +13,12 @@
 
 <script>
 import LhCvSkills from '~/components/LhCvSkills'
+import LhCvListHeadline from '~/components/LhCvListHeadline'
 export default {
   name: 'LhCvSkillsList',
   components: {
-    LhCvSkills
+    LhCvSkills,
+    LhCvListHeadline
   },
   props: {
     object: {

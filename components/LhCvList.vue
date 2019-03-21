@@ -1,10 +1,10 @@
 <template>
   <section>
-    <h2
+    <lh-cv-list-headline
       v-if="object.title"
       v-text="object.title" />
     <ul>
-      <LhCvListItem
+      <lh-cv-list-item
         v-for="(item, index) in object.items"
         :key="index"
         :item="item"
@@ -15,10 +15,12 @@
 
 <script>
 import LhCvListItem from '~/components/LhCvListItem'
+import LhCvListHeadline from '~/components/LhCvListHeadline'
 export default {
   name: 'LhCvList',
   components: {
-    LhCvListItem
+    LhCvListItem,
+    LhCvListHeadline
   },
   props: {
     object: {
@@ -39,21 +41,6 @@ section {
   width: 100%;
   &:last-of-type {
     margin: 0;
-  }
-  h2 {
-    position: relative;
-    color: $c-primary;
-    text-align: left;
-    margin: 0 0 $s-s 0;
-    font-weight: 600;
-    &:after {
-      position: absolute;
-      content: ' ';
-      bottom: 0;
-      left: 0;
-      width: 3rem;
-      border-bottom: 2px solid $c-accent;
-    }
   }
   ul {
     padding: 0;

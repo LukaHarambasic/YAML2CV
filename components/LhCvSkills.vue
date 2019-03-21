@@ -1,6 +1,5 @@
 <template>
-  <section
-    class="list">
+  <section>
     <h3
       v-if="object.title"
       v-text="object.title" />
@@ -26,7 +25,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.list {
+section {
   margin: 0;
   h3 {
     font-weight: 600;
