@@ -140,3 +140,4 @@ footer:
     url: https://linkedin.com/in/harambasic
 settings:
   showLogo: true
+  justifyDescription: true

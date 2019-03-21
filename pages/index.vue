@@ -7,10 +7,12 @@
       <div class="main">
         <LhCvList
           :title="'Experience'"
-          :items="cv.experience" />
+          :items="cv.experience"
+          :settings="cv.settings" />
         <LhCvList
           :title="'Education'"
-          :items="cv.education" />
+          :items="cv.education"
+          :settings="cv.settings" />
       </div>
       <aside class="skills">
         <h2>Skills</h2>
@@ -34,7 +36,8 @@
     <lh-cv-page>
       <LhCvList
         :title="'Voluntary Work'"
-        :items="cv.voluntary" />
+        :items="cv.voluntary"
+        :settings="cv.settings" />
       <LhCvFooter
         :links="cv.footer"
         :showLogo="cv.settings.showLogo" />

@@ -35,6 +35,7 @@
     <p
       v-if="item.description"
       v-html="item.description"
+      :class="{ justify: settings.justifyDescription }"
       class="description" />
   </li>
 </template>
@@ -44,6 +45,10 @@ export default {
   name: 'LhCvListItem',
   props: {
     item: {
+      required: true,
+      type: Object
+    },
+    settings: {
       required: true,
       type: Object
     }
@@ -85,8 +90,6 @@ li {
       font-weight: 600;
       font-size: $fs;
     }
-    .position {
-    }
   }
   .information {
     display: flex;
@@ -115,6 +118,9 @@ li {
   }
   .description {
     margin: 0;
+    &.justify {
+      text-align: justify;
+    }
   }
 }
 </style>

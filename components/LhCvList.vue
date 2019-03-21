@@ -8,7 +8,8 @@
       <LhCvListItem
         v-for="(item, index) in items"
         :key="index"
-        :item="item" />
+        :item="item"
+        :settings="settings" />
     </ul>
   </section>
 </template>
@@ -28,6 +29,10 @@ export default {
     items: {
       required: true,
       type: Array
+    },
+    settings: {
+      required: true,
+      type: Object
     }
   }
 }
