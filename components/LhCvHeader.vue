@@ -45,14 +45,6 @@
 
       .firstname {
         position: relative;
-        &:after {
-          position: absolute;
-          content: ' ';
-          bottom: 0;
-          left: 0;
-          width: 3rem;
-          border-bottom: 2px solid $c-accent;
-        }
       }
     }
   }
