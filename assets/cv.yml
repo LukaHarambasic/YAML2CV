@@ -2,7 +2,8 @@
 name:
   first: Luka
   last: Harambasic
-experience:
+
+experienceFirstPage:
   -
       title: SAP SE
       position: User Experience Design
@@ -35,6 +36,24 @@ experience:
       date:
           from: 01/2017
           to: 04/2017
+
+experienceSecondPage:
+  -
+      title: SAP SE
+      position: User Experience Design
+      description: SAP Analytics Cloud - Creating a prototype with new functionalities based on customer feedback.
+      location: Walldorf, Germany
+      date:
+          from: 08/2018
+          to: 11/2018
+  -
+      title: SAP SE
+      position: Consulting
+      description: Utilities and Waste - IoT (photovoltaic) showcase for municipal utilities.
+      location: Dresden, Germany
+      date:
+          from: 02/2018
+          to: 05/2018
 
 education:
   -

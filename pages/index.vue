@@ -1,46 +1,47 @@
 <template>
   <section class="container-in">
     <lh-cv-page
-      :isFirst="true">
-      <LhCvHeader
+      :isFirst="true"
+      :settings="settings">
+      <lh-cv-header
         :name="cv.name" />
       <div class="main">
-        <LhCvList
-          :title="'Experience'"
-          :items="cv.experience"
-          :settings="cv.settings" />
-        <LhCvList
+        <lh-cv-list
           :title="'Education'"
           :items="cv.education"
+          :settings="cv.settings" />
+        <lh-cv-list
+          :title="'Experience'"
+          :items="cv.experienceFirstPage"
           :settings="cv.settings" />
       </div>
       <aside class="skills">
         <h2>Skills</h2>
-        <LhCvSkills
+        <lh-cv-skills
           :title="'Development'"
           :items="cv.skills.development" />
-        <LhCvSkills
+        <lh-cv-skills
           :title="'Software'"
           :items="cv.skills.software" />
-        <LhCvSkills
+        <lh-cv-skills
           :title="'Other'"
           :items="cv.skills.others" />
-        <LhCvSkills
+        <lh-cv-skills
           :title="'Languages'"
           :items="cv.skills.languages" />
       </aside>
-      <LhCvFooter
-        :links="cv.footer"
-        :showLogo="cv.settings.showLogo" />
     </lh-cv-page>
-    <lh-cv-page>
-      <LhCvList
+    <lh-cv-page
+      :settings="cv.settings">
+      <lh-cv-list
+        v-if="cv.experienceSecondPage"
+        :title="''"
+        :items="cv.experienceSecondPage"
+        :settings="cv.settings" />
+      <lh-cv-list
         :title="'Voluntary Work'"
         :items="cv.voluntary"
         :settings="cv.settings" />
-      <LhCvFooter
-        :links="cv.footer"
-        :showLogo="cv.settings.showLogo" />
     </lh-cv-page>
   </section>
 </template>
@@ -50,7 +51,6 @@ import LhCvPage from '~/components/LhCvPage.vue'
 import LhCvList from '~/components/LhCvList.vue'
 import LhCvSkills from '~/components/LhCvSkills.vue'
 import LhCvHeader from '~/components/LhCvHeader.vue'
-import LhCvFooter from '~/components/LhCvFooter.vue'
 import cv from '~/assets/cv.yml'
 
 export default {
@@ -59,8 +59,7 @@ export default {
     LhCvPage,
     LhCvList,
     LhCvSkills,
-    LhCvHeader,
-    LhCvFooter
+    LhCvHeader
   },
   data() {
     return {

@@ -3,17 +3,27 @@
     class="page"
     :class="{ first: isFirst}">
     <slot />
-    <LhCvFooter />
+    <lh-cv-footer
+      :links="cv.footer"
+      :showLogo="settings.showLogo" />
   </div>
 </template>
 
 <script>
+import LhCvFooter from '~/components/LhCvFooter.vue'
 export default {
   name: 'LhCvPage',
+  components: {
+    LhCvFooter
+  },
   props: {
     isFirst: {
       type: Boolean,
       default: false
+    },
+    settings: {
+      required: true,
+      type: Object
     }
   }
 }
