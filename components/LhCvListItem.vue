@@ -34,7 +34,7 @@
     </div>
     <p
       v-if="item.description"
-      v-text="item.description"
+      v-html="item.description"
       class="description" />
   </li>
 </template>
