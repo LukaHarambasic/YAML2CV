@@ -67,11 +67,20 @@ section {
     display: block;
     width: auto;
   }
+  @media screen and (max-width: $desktop) {
+    width: 100%;
+  }
   .main {
     width: 65%;
+    @media screen and (max-width: $desktop) {
+      width: 100%;
+    }
   }
   .skills {
     width: 30%;
+    @media screen and (max-width: $desktop) {
+      width: 100%;
+    }
   }
 }
 </style>

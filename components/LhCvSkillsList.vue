@@ -49,5 +49,8 @@ export default {
   }
   .skillsList {
     margin: 0 0 0 $s-xs;
+    @media screen and (max-width: $desktop) {
+      margin: 0 0 0 0;
+    }
   }
 </style>

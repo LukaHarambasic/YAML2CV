@@ -5,6 +5,7 @@
     <slot />
     <lh-cv-footer
       :links="footer"
+      :isFirst="isFirst"
       :showLogo="settings.showLogo" />
   </div>
 </template>
@@ -48,6 +49,14 @@ export default {
   justify-content: space-between;
   align-content: flex-start;
   flex-wrap: wrap;
+  @media screen and (max-width: $desktop) {
+    width: 100%;
+    height: auto;
+    //padding: $s;
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
   @media print {
     margin: 0;
     border-radius: 0;

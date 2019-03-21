@@ -1,6 +1,6 @@
 <template>
   <footer
-  class="footer">
+    :class="{ first: isFirst}">
     <svg
       v-if="showLogo"
       class="logo"
@@ -52,13 +52,17 @@
       showLogo: {
         type: Boolean,
         required: true
+      },
+      isFirst: {
+        type: Boolean,
+        default: false
       }
     }
   }
 </script>
 
 <style lang="scss" scoped>
-.footer {
+footer {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -72,6 +76,18 @@
   justify-content: center;
   padding: $s-s 0;
   border-radius: 0 0 $radius $radius;
+  &.first {
+    @media screen and (max-width: $desktop) {
+      display:none;
+    }
+  }
+  @media screen and (max-width: $desktop) {
+    width: 100%;
+    height: auto;
+    padding: $s;
+    margin: 0;
+    position: relative;
+  }
   .logo {
     position: absolute;
     top: 0;
@@ -91,15 +107,25 @@
     }
   }
   ul {
-    align-self: center;
     margin: 0;
     list-style: none;
     display: flex;
+    align-self: center;
+    @media screen and (max-width: $desktop) {
+      flex-flow: column nowrap;
+    }
     li {
       margin-right: $s/2;
+      @media screen and (max-width: $desktop) {
+        margin: 0;
+      }
       &::after {
         content: "•";
         margin-left: $s/2;
+        @media screen and (max-width: $desktop) {
+          content: "";
+          margin: 0;
+        }
       }
       &:last-of-type {
         margin: 0;

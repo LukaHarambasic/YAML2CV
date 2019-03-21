@@ -49,6 +49,9 @@ section {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media screen and (max-width: $desktop) {
+      margin: $s-xs 0 0 0;
+    }
   }
 }
 </style>

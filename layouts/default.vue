@@ -18,5 +18,8 @@ main {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  width: 100%;
+  @media screen and (max-width: $desktop) {
+  }
 }
 </style>
