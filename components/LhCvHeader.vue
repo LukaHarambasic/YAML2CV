@@ -38,7 +38,7 @@
 
     h1 {
       color: $c-primary;
-      font-size: 4rem;
+      font-size: $fs-xl;
       margin: $s 0 0 $s-xl;
       width: 100%;
       line-height: 1;
