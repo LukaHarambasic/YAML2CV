@@ -2,7 +2,8 @@
   <section class="container-in">
     <lh-cv-page
       :isFirst="true"
-      :settings="settings">
+      :settings="cv.settings"
+      :footer="cv.footer">
       <lh-cv-header
         :name="cv.name" />
       <div class="main">
@@ -32,7 +33,8 @@
       </aside>
     </lh-cv-page>
     <lh-cv-page
-      :settings="cv.settings">
+      :settings="cv.settings"
+      :footer="cv.footer">
       <lh-cv-list
         v-if="cv.experienceSecondPage"
         :title="''"

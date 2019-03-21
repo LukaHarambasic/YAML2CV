@@ -4,7 +4,7 @@
     :class="{ first: isFirst}">
     <slot />
     <lh-cv-footer
-      :links="cv.footer"
+      :links="footer"
       :showLogo="settings.showLogo" />
   </div>
 </template>
@@ -24,6 +24,10 @@ export default {
     settings: {
       required: true,
       type: Object
+    },
+    footer: {
+      required: true,
+      type: Array
     }
   }
 }
