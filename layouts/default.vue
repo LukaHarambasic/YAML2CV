@@ -1,5 +1,5 @@
 <template>
-  <main class="cv container-out">
+  <main>
     <nuxt/>
   </main>
 </template>
@@ -12,8 +12,11 @@
 </script>
 
 <style lang="scss">
-  .cv {
-    background: $c-secondary;
-    color: $c-primary;
-  }
+main {
+  background: $c-secondary;
+  color: $c-primary;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
 </style>

@@ -1,6 +1,5 @@
 <template>
-  <section
-    class="list">
+  <section>
     <h2
       v-if="object.title"
       v-text="object.title" />
@@ -35,8 +34,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.list {
+section {
   margin: 0 0 $s-l 0;
+  width: 100%;
   &:last-of-type {
     margin: 0;
   }

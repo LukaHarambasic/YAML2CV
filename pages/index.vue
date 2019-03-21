@@ -1,6 +1,5 @@
 <template>
-  <section 
-    class="container-in">
+  <section>
     <lh-cv-page
       :isFirst="true"
       :settings="cv.settings"
@@ -62,10 +61,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.main {
-  width: 65%;
-}
-.skills {
-  width: 30%;
+section {
+  @media print {
+    margin: 0;
+    display: block;
+    width: auto;
+  }
+  .main {
+    width: 65%;
+  }
+  .skills {
+    width: 30%;
+  }
 }
 </style>

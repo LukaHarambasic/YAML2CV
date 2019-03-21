@@ -1,3 +1,10 @@
 @import 'settings';
 
-@import 'layout';
+body {
+  font-family: $ff;
+  line-height: 1.4;
+  background: $c-secondary;
+  @media print {
+    font-size: 12pt;
+  }
+}
