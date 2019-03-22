@@ -76,6 +76,7 @@ footer {
   justify-content: center;
   padding: $s-s 0;
   border-radius: 0 0 $radius $radius;
+  transform: translateY(100%);
   &.first {
     @media screen and (max-width: $desktop) {
       display:none;
@@ -85,8 +86,7 @@ footer {
     width: 100%;
     height: auto;
     padding: $s;
-    margin: 0;
-    position: relative;
+    margin: 0 0 $s 0;
   }
   .logo {
     position: absolute;
@@ -108,6 +108,7 @@ footer {
   }
   ul {
     margin: 0;
+    padding: 0;
     list-style: none;
     display: flex;
     align-self: center;

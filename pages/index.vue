@@ -31,6 +31,7 @@
         :settings="cv.settings" />
       <lh-cv-list
         v-if="cv.voluntary.items"
+        class="voluntary"
         :object="cv.voluntary"
         :settings="cv.settings" />
     </lh-cv-page>
@@ -64,7 +65,6 @@ export default {
 section {
   @media print {
     margin: 0;
-    display: block;
     width: auto;
   }
   @media screen and (max-width: $desktop) {
@@ -80,7 +80,11 @@ section {
     width: 30%;
     @media screen and (max-width: $desktop) {
       width: 100%;
+      margin: $s-l 0 0 0;
     }
+  }
+  .voluntary{
+    margin: 0 0 $s 0;
   }
 }
 </style>

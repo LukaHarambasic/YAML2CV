@@ -31,9 +31,14 @@ export default {
 
 <style lang="scss" scoped>
   .skillsList {
-    margin: 0 0 0 $s-xs;
+    margin: 0 0 $s-xs $s-xs;
     @media screen and (max-width: $desktop) {
-      margin: 0 0 0 0;
+      margin: 0 0 $s-xs 0;
+    }
+    &:last-child {
+      @media screen and (max-width: $desktop) {
+        margin: 0
+      }
     }
   }
 </style>

@@ -14,12 +14,16 @@
 <style lang="scss">
 main {
   background: $c-secondary;
-  color: $c-primary;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   width: 100%;
   @media screen and (max-width: $desktop) {
+    margin: 3%;
+    width: 94%;
+    background: $c-white;
+    box-shadow: 0 0 40px $c-primary-shadow;
+    border-radius: $radius;
   }
 }
 </style>

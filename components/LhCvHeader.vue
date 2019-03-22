@@ -29,18 +29,19 @@
     margin: 0 0 ($s * 2) 0;
     display: flex;
     flex-flow: row nowrap;
+    align-items: center;
     @media screen and (max-width: $desktop) {
       flex-flow: column nowrap;
       margin: 0;
-      hieght: 0;
     }
     img {
       max-height: 100%;
       border-radius: $radius 0 0 0;
       @media screen and (max-width: $desktop) {
         border-radius: $radius $radius 0 0;
+        margin: $s-xl 0 0 0;
         max-height: auto;
-        max-width: 100%;
+        max-width: 80%;
       }
     }
     h1 {
@@ -51,7 +52,7 @@
       display: inline;
       @media screen and (max-width: $desktop) {
         font-size: $fs-l*1.5;
-        margin: 0;
+        margin: $s 0 $s 0;
       }
     }
   }

@@ -20,7 +20,7 @@ $s-xl:  2rem;
 * Fonts
  */
 //font family (ff)
-$ff: 'Open Sans', sans-serif;
+$ff: 'Roboto', sans-serif;
 
 //font size (fs)
 $fs-xs: $s-xs;
@@ -34,6 +34,8 @@ $fs-xl: $s-xl * 2;
 * Colors (c)
  */
 $c-primary:        #2E2E3E;
+$c-font-headline:    $c-primary;
+$c-font-text:        rgba($c-primary, 0.8);
 $c-primary-shadow: rgba(18,18,24, 0.3);
 $c-secondary:      #E2EBF0;
 $c-accent:         #dd0049;

@@ -52,10 +52,10 @@ export default {
   @media screen and (max-width: $desktop) {
     width: 100%;
     height: auto;
-    //padding: $s;
-    padding: 0;
+    padding: $s-l;
     margin: 0;
-    display: block;
+    box-shadow: none;
+    border-radius: 0;
   }
   @media print {
     margin: 0;
@@ -73,11 +73,19 @@ export default {
       $c-white 20%,
       $c-white 100%
     );
+    @media screen and (max-width: $desktop) {
+      border-radius: $radius $radius 0 0;
+      padding-bottom: 0;
+    }
   }
   &:last-of-type {
     margin-bottom: ($s * 6);
     @media print {
       margin: 0;
+    }
+    @media screen and (max-width: $desktop) {
+      margin: 0;
+      border-radius: 0 0 $radius $radius;
     }
   }
 }

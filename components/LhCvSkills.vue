@@ -26,16 +26,16 @@ export default {
 
 <style lang="scss" scoped>
 section {
-  margin: 0;
   h3 {
     font-weight: 600;
     font-size: 1rem;
     margin: 0;
+    color: $c-font-headline;
   }
   ul {
     list-style: none;
     padding: 0;
-    margin: 0 0 $s-xs 0;
+    margin: 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
