@@ -35,9 +35,10 @@
 2. copy the files from the dist folder
 
 ## ToDos
-- [ ] add responsiveness
-- [ ] explain how to add new informations
 - [ ] add field for address and telephone
+- [ ] add new layout with: skill level, timeline and icons
+- [x] add responsiveness
+- [x] explain how to add new informations
  
 ## Technology
 This project uses [Vue.js](https://vuejs.org/) in [Nuxt.js](https://nuxtjs.org). 
