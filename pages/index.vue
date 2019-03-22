@@ -20,7 +20,8 @@
       <lh-cv-skills-list 
         class="skills"
         v-if="cv.skills.items"
-        :object="cv.skills" />
+        :object="cv.skills"
+        :settings="cv.settings" />
     </lh-cv-page>
     <lh-cv-page
       :settings="cv.settings"

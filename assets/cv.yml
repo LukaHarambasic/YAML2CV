@@ -1,4 +1,11 @@
 ---
+settings:
+  showLogo: true
+  justifyDescription: false
+  showSkillLevel: true
+  maxSkillLevel: 5
+  sortSkills: decreasing # increasing / decreasing / alphabetical / none
+
 name:
   first: Luka
   last: Harambasic
@@ -125,37 +132,87 @@ skills:
         development:
             title: Development
             items:
-                - Javascript (Vue.js, SAPUI5)
-                - HTML5
-                - CSS3
-                - Git
-                - Python
-                - SAP HANA
-                - SAP Cloud Platform
-                - SQL
-                - Java/Kotlin
-                - PHP
+                - 
+                    title: JavaScript
+                    level: 4
+                - 
+                    title: Vue.js
+                    level: 4
+                - 
+                    title: SAPUI5
+                    level: 3
+                - 
+                    title: HTML5
+                    level: 4
+                - 
+                    title: CSS3
+                    level: 4
+                - 
+                    title: Git
+                    level: 3
+                - 
+                    title: Python
+                    level: 3
+                - 
+                    title: SAP HANA
+                    level: 2
+                - 
+                    title: SAP CP
+                    level: 3
+                - 
+                    title: SQL
+                    level: 4
+                - 
+                    title: Java/Kotlin
+                    level: 2
+                - 
+                    title: PHP
+                    level: 1
         software:
             title: Software
             items:
-                - Office 365
-                - G Suite
-                - Sketch
-                - Figma
-                - Zapier
-                - Webstorm
+                - 
+                    title: Office 365
+                    level: 2
+                - 
+                    title: G Suite
+                    level: 4
+                - 
+                    title: Sketch
+                    level: 3
+                - 
+                    title: Figma
+                    level: 3
+                - 
+                    title: Zapier
+                    level: 3
         others:
             title: Others
             items:
-                - Project Management (Scrum)
-                - Design
-                - Communication
-                - Presentation
+                - 
+                    title: Project Management
+                    level: 3
+                - 
+                    title: Scrum
+                    level: 4
+                - 
+                    title: Design
+                    level: 3
+                - 
+                    title: Communication
+                    level: 4
+                - 
+                    title: Presentation
+                    level: 4
         languages:
             title: Languages
             items:
-                - German
-                - English
+                - 
+                    title: German
+                    level: 5
+                - 
+                    title: English
+                    level: 4
 footer:
   -
     title: luka@harambasic.de
@@ -166,6 +223,3 @@ footer:
   -
     title: linkedin.com/in/harambasic
     url: https://linkedin.com/in/harambasic
-settings:
-  showLogo: true
-  justifyDescription: false

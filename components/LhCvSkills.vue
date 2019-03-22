@@ -7,7 +7,7 @@
       <li
         v-for="(item, index) in object.items"
         :key="index"
-        v-text="item" />
+        v-text="item.title" />
     </ul>
   </section>
 </template>
