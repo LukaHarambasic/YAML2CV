@@ -13,7 +13,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=no' },
-      { name: 'theme-color', content: '#2E2E3E' },
+      { name: 'theme-color', content: '#E2EBF0' },
       { hid: 'description', name: 'description', content: 'Come in and get to know me! :)' }
     ],
     link: [
