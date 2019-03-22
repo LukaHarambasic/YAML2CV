@@ -69,7 +69,8 @@ li {
   flex-flow: column wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  margin: 0 0 $s-s 0;
+  //@debugmargin: 0 0 $s-s 0;
+  padding: 0 0 $s-s 0;
   text-align: left;
   width: 100%;
   &:last-of-type {

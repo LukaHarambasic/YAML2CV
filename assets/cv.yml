@@ -1,8 +1,9 @@
 ---
 settings:
   showLogo: true
+  useTimeLine: true
   justifyDescription: false
-  showSkillLevel: false
+  showSkillLevel: true
   maxSkillLevel: 5
   sortSkills: decreasing # increasing / decreasing / alphabetical / none
 
@@ -190,7 +191,7 @@ skills:
             title: Others
             items:
                 - 
-                    title: Project Management
+                    title: PM
                     level: 3
                 - 
                     title: Scrum

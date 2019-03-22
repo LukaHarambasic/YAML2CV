@@ -3,7 +3,14 @@
     <lh-cv-list-headline
       v-if="object.title"
       :title="object.title" />
-    <ul>
+    <ul v-if="settings.useTimeLine">
+      <lh-cv-list-item-timeline
+        v-for="(item, index) in object.items"
+        :key="index"
+        :item="item"
+        :justifyDescription="settings.justifyDescription" />
+    </ul>
+    <ul v-else>
       <lh-cv-list-item
         v-for="(item, index) in object.items"
         :key="index"
@@ -15,11 +22,13 @@
 
 <script>
 import LhCvListItem from '~/components/LhCvListItem'
+import LhCvListItemTimeline from '~/components/LhCvListItemTimeline'
 import LhCvListHeadline from '~/components/LhCvListHeadline'
 export default {
   name: 'LhCvList',
   components: {
     LhCvListItem,
+    LhCvListItemTimeline,
     LhCvListHeadline
   },
   props: {
@@ -44,7 +53,7 @@ section {
   }
   ul {
     padding: 0;
-    margin: $s-xs 0 0 $s-xs;
+    //margin: $s-xs 0 0 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

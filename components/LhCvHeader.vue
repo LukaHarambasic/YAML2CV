@@ -1,9 +1,9 @@
 <template>
   <header class="header">
-    <img src="../static/profile.jpg" />
+    <img src="../static/Luka.png" />
     <h1>
-      <span v-text="name.last" /><br/>
-      <span class="firstname" v-text="name.first" />
+      <span v-text="name.first" /><br/>
+      <span v-text="name.last" />
     </h1>
   </header>
 </template>
@@ -22,7 +22,7 @@
 
 <style lang="scss" scoped>
   .header {
-    background: $c-white;
+    //background: $c-white;
     border-radius: $radius;
     width: 100%;
     height: 20%;
@@ -45,9 +45,9 @@
       }
     }
     h1 {
-      color: $c-primary;
+      color: $c-white;
       font-size: $fs-xl;
-      margin: $s 0 0 $s-xl;
+      margin: 0 0 0 $s-xl;
       line-height: 1;
       display: inline;
       @media screen and (max-width: $desktop) {
