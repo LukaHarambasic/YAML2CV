@@ -1,7 +1,6 @@
 const pkg = require('./package')
 const fs = require('fs')
 const fm = require('front-matter')
-import marked from 'marked'
 
 module.exports = {
   mode: 'universal',
@@ -10,11 +9,12 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title: 'Luka Harambasic',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=no' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { name: 'theme-color', content: '#2E2E3E' },
+      { hid: 'description', name: 'description', content: 'Come in and get to know me! :)' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -29,7 +29,7 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#2E2E3E' },
 
   /*
   ** Global CSS
