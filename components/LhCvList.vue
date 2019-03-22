@@ -2,7 +2,7 @@
   <section>
     <lh-cv-list-headline
       v-if="object.title"
-      v-text="object.title" />
+      :title="object.title" />
     <ul>
       <lh-cv-list-item
         v-for="(item, index) in object.items"
@@ -49,6 +49,9 @@ section {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media screen and (max-width: $desktop) {
+      margin: $s-xs 0 0 0;
+    }
   }
 }
 </style>

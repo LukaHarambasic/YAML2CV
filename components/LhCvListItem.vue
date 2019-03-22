@@ -86,6 +86,7 @@ li {
     margin: 0 0 0 0;
     .title,
     .position {
+      color: $c-font-headline;
       margin: 0;
       display: inline-block;
       font-weight: 600;
@@ -118,7 +119,7 @@ li {
     }
   }
   .description {
-    margin: 0;
+    margin: 0.2rem 0 0 0;
     &.justify {
       text-align: justify;
     }

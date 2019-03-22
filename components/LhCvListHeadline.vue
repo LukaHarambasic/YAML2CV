@@ -18,7 +18,7 @@ export default {
 <style lang="scss" scoped>
   h2 {
     position: relative;
-    color: $c-primary;
+      color: $c-font-headline;
     text-align: left;
     margin: 0 0 $s-s 0;
     font-weight: 600;
