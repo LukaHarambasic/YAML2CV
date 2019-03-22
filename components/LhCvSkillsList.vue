@@ -3,19 +3,21 @@
     <lh-cv-list-headline
       v-if="object.title"
       :title="object.title" />
-    <lh-cv-skills-levels
-      class="skillsList"
-      v-if="settings.showSkillLevel"
-      v-for="(object, index) in object.items"
-      :key="index"
-      :object="object"
-      :settings="settings" />
-    <lh-cv-skills
-      class="skillsList"
-      v-else
-      v-for="(object, index) in object.items"
-      :key="index"
-      :object="object" />
+    <div v-if="settings.showSkillLevel">
+      <lh-cv-skills-levels
+        class="skillsList"
+        v-for="(skills, index) in object.items"
+        :key="index"
+        :object="skills"
+        :settings="settings" />
+    </div>
+    <div v-else>
+      <lh-cv-skills
+        class="skillsList"
+        v-for="(skills, index) in object.items"
+        :key="index"
+        :object="skills" />
+    </div>
   </aside>
 </template>
 

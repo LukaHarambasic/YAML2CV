@@ -5,9 +5,9 @@
       v-text="object.title" />
     <ul>
       <li
-        v-for="(item, index) in object.items"
-        :key="index"
-        v-text="item.title" />
+        v-for="skill in object.items"
+        :key="skill.title"
+        v-text="skill.title" />
     </ul>
   </section>
 </template>

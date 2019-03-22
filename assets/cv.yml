@@ -2,7 +2,7 @@
 settings:
   showLogo: true
   justifyDescription: false
-  showSkillLevel: true
+  showSkillLevel: false
   maxSkillLevel: 5
   sortSkills: decreasing # increasing / decreasing / alphabetical / none
 
