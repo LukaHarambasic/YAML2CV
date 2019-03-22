@@ -84,7 +84,9 @@ section {
     }
   }
   .voluntary{
-    margin: 0 0 $s 0;
+    @media screen and (max-width: $desktop) {
+    margin: 0 0 $s-xl 0;
+    }
   }
 }
 </style>
