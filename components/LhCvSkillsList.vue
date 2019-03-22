@@ -2,7 +2,7 @@
   <aside>
     <lh-cv-list-headline
       v-if="object.title"
-      v-text="object.title" />
+      :title="object.title" />
     <lh-cv-skills
       class="skillsList"
       v-for="(object, index) in object.items"

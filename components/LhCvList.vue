@@ -2,7 +2,7 @@
   <section>
     <lh-cv-list-headline
       v-if="object.title"
-      v-text="object.title" />
+      :title="object.title" />
     <ul>
       <lh-cv-list-item
         v-for="(item, index) in object.items"
