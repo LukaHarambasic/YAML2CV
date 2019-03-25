@@ -7,12 +7,12 @@
       <li
         v-for="(skill, index) in sortedSkills"
         :key="index">
+        <h4 v-text="skill.title" />
         <div class="bar">
           <div 
             class="filled"
             :style="{width: ((skill.level / settings.maxSkillLevel) * 100) + '%'}" />
         </div>
-        <h4 v-text="skill.title" />
       </li>
     </ul>
   </section>
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'LhCvSkillsLevels',
+  name: 'SkillsLevels',
   props: {
     object: {
       required: true,

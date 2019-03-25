@@ -1,6 +1,6 @@
 <template>
   <footer
-    :class="{ first: isFirst}">
+    :class="{ first: isFirst }">
     <svg
       v-if="showLogo"
       class="logo"
@@ -43,7 +43,7 @@
 
 <script>
   export default {
-    name: 'LhCvFooter',
+    name: 'PageFooter',
     props: {
       links: {
         type: Array,
@@ -77,6 +77,11 @@ footer {
   padding: $s-s 0;
   border-radius: 0 0 $radius $radius;
   transform: translateY(100%);
+  @media print {
+    border-radius: 0;
+    transform: none;
+    margin: 0;
+  }
   &.first {
     @media screen and (max-width: $desktop) {
       display:none;
@@ -100,7 +105,7 @@ footer {
     border-radius: 50%;
     transition: all 0.7s ease;
     @media print {
-      right: $s*2;
+      right: $s * 2;
     }
     &:hover {
       transform: rotate(360deg);
@@ -139,8 +144,10 @@ footer {
         color: $c-secondary;
         transition: all 250ms ease-out;
         text-decoration: none;
+        border-bottom: 1px transparent solid;
         &:hover {
-          text-decoration: underline; //TODO: to boarder for animation
+          opacity: 0.9;
+          border-bottom-color: $c-secondary;
         }
       }
     }

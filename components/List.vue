@@ -1,10 +1,17 @@
 <template>
   <section>
-    <lh-cv-list-headline
+    <page-headline
       v-if="object.title"
       :title="object.title" />
-    <ul>
-      <lh-cv-list-item
+    <ul v-if="settings.useTimeLine">
+      <list-item-timeline
+        v-for="(item, index) in object.items"
+        :key="index"
+        :item="item"
+        :justifyDescription="settings.justifyDescription" />
+    </ul>
+    <ul v-else>
+      <list-item
         v-for="(item, index) in object.items"
         :key="index"
         :item="item"
@@ -14,13 +21,15 @@
 </template>
 
 <script>
-import LhCvListItem from '~/components/LhCvListItem'
-import LhCvListHeadline from '~/components/LhCvListHeadline'
+import ListItem from '~/components/ListItem'
+import ListItemTimeline from '~/components/ListItemTimeline'
+import PageHeadline from '~/components/PageHeadline'
 export default {
-  name: 'LhCvList',
+  name: 'List',
   components: {
-    LhCvListItem,
-    LhCvListHeadline
+    ListItem,
+    ListItemTimeline,
+    PageHeadline
   },
   props: {
     object: {
@@ -44,7 +53,7 @@ section {
   }
   ul {
     padding: 0;
-    margin: $s-xs 0 0 $s-xs;
+    margin: 0 0 0 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

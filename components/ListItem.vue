@@ -2,18 +2,6 @@
   <li
     v-if="item">
     <div
-      v-if="item.title || item.position"
-      class="header">
-      <h3
-        v-if="item.title"
-        v-text="item.title"
-        class="title" />
-      <h4
-        v-if="item.position"
-        v-text="position"
-        class="position" />
-    </div>
-    <div
       v-if="item.date.from || item.date.to || item.location"
       class="information">
       <div
@@ -33,6 +21,18 @@
         v-text="item.location"
         class="location" />
     </div>
+    <div
+      v-if="item.title || item.position"
+      class="header">
+      <h3
+        v-if="item.title"
+        v-text="item.title"
+        class="title" />
+      <h4
+        v-if="item.position"
+        v-text="position"
+        class="position" />
+    </div>
     <p
       v-if="item.description"
       v-html="item.description"
@@ -43,7 +43,7 @@
 
 <script>
 export default {
-  name: 'LhCvListItem',
+  name: 'ListItem',
   props: {
     item: {
       required: true,
@@ -69,7 +69,8 @@ li {
   flex-flow: column wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  margin: 0 0 $s-s 0;
+  margin: 0 0 0 0;
+  padding: 0 0 $s-s 0;
   text-align: left;
   width: 100%;
   &:last-of-type {

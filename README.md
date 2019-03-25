@@ -5,7 +5,7 @@
 ## Customize the CV
 1. Go to `assets/cv.yml` and edit the file so that it fit your life and not mine :)
 2. Change the image in `static/profile.jpg`
-3. If you want to use the logo in the footer leave the settings true in the YAML file and change the svg in `components/LhCvFooter.vue` to your logo.
+3. If you want to use the logo in the footer leave the settings true in the YAML file and change the svg in `components/Footer.vue` to your logo.
 4. Change the colors in `assets/scss/_settings.scss` mainly the `$c-primary` color.
 5. In the same file you can change the font but than you have to add the Google Font in the `nuxt.config.js` file.
 

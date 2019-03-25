@@ -5,7 +5,7 @@
 
 <script>
 export default {
-  name: 'LhCvListHeadline',
+  name: 'PageHeadline',
   props: {
     title: {
       type: String,
@@ -18,17 +18,9 @@ export default {
 <style lang="scss" scoped>
   h2 {
     position: relative;
-      color: $c-font-headline;
+    color: $c-font-headline;
     text-align: left;
-    margin: 0 0 $s-s 0;
+    margin: 0 0 $s-xxs 0;
     font-weight: 600;
-    &:after {
-      position: absolute;
-      content: ' ';
-      bottom: 0;
-      left: 0;
-      width: 3rem;
-      border-bottom: 2px solid $c-accent;
-    }
   }
 </style>

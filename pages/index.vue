@@ -1,58 +1,74 @@
 <template>
   <section>
-    <lh-cv-page
+    <page
+      :settings="cv.settings"
+      :footer="cv.footer">
+      <coverletter-information
+        :information="cv.person"/>
+      <coverletter-information
+        :information="cv.company"/>
+      <coverletter-text
+        :person="cv.person"
+        :company="cv.company"
+        :coverletter="cv.coverletter" />
+    </page>
+    <page
       :isFirst="true"
       :settings="cv.settings"
       :footer="cv.footer">
-      <lh-cv-header
-        :name="cv.name" />
+      <page-header
+        :name="cv.person.name" />
       <div 
         class="main">
-        <lh-cv-list
+        <list
           v-if="cv.education.items"
           :object="cv.education"
           :settings="cv.settings" />
-        <lh-cv-list
+        <list
           v-if="cv.experienceFirstPage.items"
           :object="cv.experienceFirstPage"
           :settings="cv.settings" />
       </div>
-      <lh-cv-skills-list 
+      <skills-list 
         class="skills"
         v-if="cv.skills.items"
         :object="cv.skills"
         :settings="cv.settings" />
-    </lh-cv-page>
-    <lh-cv-page
+    </page>
+    <page
       :settings="cv.settings"
       :footer="cv.footer">
-      <lh-cv-list
+      <list
         v-if="cv.experienceSecondPage.items"
         :object="cv.experienceSecondPage"
         :settings="cv.settings" />
-      <lh-cv-list
+      <list
         v-if="cv.voluntary.items"
         class="voluntary"
         :object="cv.voluntary"
         :settings="cv.settings" />
-    </lh-cv-page>
+    </page>
   </section>
 </template>
 
 <script>
-import LhCvPage from '~/components/LhCvPage.vue'
-import LhCvList from '~/components/LhCvList.vue'
-import LhCvSkillsList from '~/components/LhCvSkillsList.vue'
-import LhCvHeader from '~/components/LhCvHeader.vue'
+import Page from '~/components/Page.vue'
+import PageHeader from '~/components/PageHeader.vue'
+import CoverletterInformation from '~/components/CoverletterInformation.vue'
+import CoverletterText from '~/components/CoverletterText.vue'
+import List from '~/components/List.vue'
+import SkillsList from '~/components/SkillsList.vue'
 import cv from '~/assets/cv.yml'
 
 export default {
   name: 'Cv',
   components: {
-    LhCvPage,
-    LhCvList,
-    LhCvSkillsList,
-    LhCvHeader
+    Page,
+    PageHeader,
+    CoverletterInformation,
+    CoverletterText,
+    List,
+    SkillsList
   },
   data() {
     return {
@@ -67,6 +83,7 @@ section {
   @media print {
     margin: 0;
     width: auto;
+    height: auto;
   }
   @media screen and (max-width: $desktop) {
     width: 100%;

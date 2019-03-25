@@ -3,7 +3,7 @@
     class="page"
     :class="{ first: isFirst}">
     <slot />
-    <lh-cv-footer
+    <page-footer
       :links="footer"
       :isFirst="isFirst"
       :showLogo="settings.showLogo" />
@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import LhCvFooter from '~/components/LhCvFooter.vue'
+import PageFooter from '~/components/PageFooter.vue'
 export default {
-  name: 'LhCvPage',
+  name: 'Page',
   components: {
-    LhCvFooter
+    PageFooter
   },
   props: {
     isFirst: {
@@ -40,8 +40,8 @@ export default {
   background: $c-white;
   box-shadow: 0 0 40px $c-primary-shadow;
   border-radius: $radius;
-  width: $s * 49.625;
-  height: $s * 71.25;
+  width: $s-page-width;
+  height: $s-page-height;
   padding: ($s * 4) ($s * 3) ($s * 3) ($s * 3);
   margin: ($s * 6) 0 0 0;
   display: flex;
@@ -61,8 +61,6 @@ export default {
     margin: 0;
     border-radius: 0;
     box-shadow: none;
-    height: 1078px;
-    width: 794px;
   }
   &.first {
     background: linear-gradient(
