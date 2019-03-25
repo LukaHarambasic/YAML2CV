@@ -30,8 +30,12 @@
         v-text="company.name.last"/>
     </div>
     <div
-      class="text"
-      v-html="coverletter.text" />
+      class="text">
+      <p 
+        v-for="(paragraph, index) in coverletter.paragraphs" 
+        :key="index"
+        v-text="paragraph" />
+    </div> 
     <div>
       <span
         class="farewell"
