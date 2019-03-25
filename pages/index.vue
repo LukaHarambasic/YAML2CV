@@ -3,11 +3,14 @@
     <lh-cv-page
       :settings="cv.settings"
       :footer="cv.footer">
-      <lh-cv-coverletter-address
-        :address="cv.person"/>
-      <lh-cv-coverletter-address
-        :address="cv.company"/>
-      <h1>Anschreiben</h1>
+      <lh-cv-coverletter-information
+        :information="cv.person"/>
+      <lh-cv-coverletter-information
+        :information="cv.company"/>
+      <lh-cv-coverletter-text
+        :person="cv.person"
+        :company="cv.company"
+        :coverletter="cv.coverletter" />
     </lh-cv-page>
     <lh-cv-page
       :isFirst="true"
@@ -50,7 +53,8 @@
 
 <script>
 import LhCvPage from '~/components/LhCvPage.vue'
-import LhCvCoverletterAddress from '~/components/LhCvCoverletterAddress.vue'
+import LhCvCoverletterInformation from '~/components/LhCvCoverletterInformation.vue'
+import LhCvCoverletterText from '~/components/LhCvCoverletterText.vue'
 import LhCvList from '~/components/LhCvList.vue'
 import LhCvSkillsList from '~/components/LhCvSkillsList.vue'
 import LhCvHeader from '~/components/LhCvHeader.vue'
@@ -60,7 +64,8 @@ export default {
   name: 'Cv',
   components: {
     LhCvPage,
-    LhCvCoverletterAddress,
+    LhCvCoverletterInformation,
+    LhCvCoverletterText,
     LhCvList,
     LhCvSkillsList,
     LhCvHeader

@@ -25,8 +25,9 @@ company:
     company: SAP SE
     department: HR
     name: 
+        speech: Herr
         first: Maximiliane
-        last: Musterman
+        last: Mustermann
     address:   
         street: Mustermanstr.
         housenumber: 7
@@ -34,6 +35,11 @@ company:
         city: Oppau
         country: Germany
 
+coverletter:
+    headline: Bewerbung um eine Ausbildung zum Bankkaufmann
+    greeting: Sehr geeherter 
+    text: Magna do mollit id officia sunt sint ullamco commodo occaecat consequat. Ad et incididunt fugiat adipisicing qui. Enim do nostrud eu in incididunt mollit ullamco. Nostrud nulla cillum aute nisi ullamco.<br /><br />Esse nulla duis exercitation nostrud enim nisi nostrud enim enim. Quis et nulla occaecat enim exercitation est incididunt non proident in sint reprehenderit sint commodo. Veniam labore et cupidatat ullamco velit velit. Labore consequat proident proident ut cillum nulla excepteur consectetur elit. Adipisicing Lorem non aute culpa id eiusmod eu.<br /><br />Voluptate labore esse laborum veniam. Excepteur velit mollit proident deserunt minim reprehenderit et fugiat officia cillum fugiat. Ut incididunt sunt consequat eiusmod magna proident ad fugiat id minim esse. Enim et officia et do tempor dolor.
+    farewell: Mit freundlichen Grüßen
 
 experienceFirstPage:
     title: Experience

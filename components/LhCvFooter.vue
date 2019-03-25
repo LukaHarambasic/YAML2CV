@@ -78,7 +78,7 @@ footer {
   border-radius: 0 0 $radius $radius;
   transform: translateY(100%);
   @media print {
-    border-radius: none;
+    border-radius: 0;
     transform: none;
     margin: 0;
   }
