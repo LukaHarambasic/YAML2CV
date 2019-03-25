@@ -1,16 +1,16 @@
 <template>
   <div class="timeline">
-    <lh-cv-list-item
+    <list-item
       :item="item"
       :justifyDescription="justifyDescription" />
   </div>
 </template>
 
 <script>
-import LhCvListItem from '~/components/LhCvListItem'
+import ListItem from '~/components/ListItem'
 export default {
   components: {
-    LhCvListItem
+    ListItem
   },
   props: {
     item: {

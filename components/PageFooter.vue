@@ -1,6 +1,6 @@
 <template>
   <footer
-    :class="{ first: isFirst}">
+    :class="{ first: isFirst }">
     <svg
       v-if="showLogo"
       class="logo"
@@ -43,7 +43,7 @@
 
 <script>
   export default {
-    name: 'LhCvFooter',
+    name: 'PageFooter',
     props: {
       links: {
         type: Array,

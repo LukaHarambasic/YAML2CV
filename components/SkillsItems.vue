@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'LhCvSkills',
+  name: 'SkillsItems',
   props: {
     object: {
       required: true,

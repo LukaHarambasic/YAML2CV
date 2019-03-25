@@ -1,74 +1,74 @@
 <template>
   <section>
-    <lh-cv-page
+    <page
       :settings="cv.settings"
       :footer="cv.footer">
-      <lh-cv-coverletter-information
+      <coverletter-information
         :information="cv.person"/>
-      <lh-cv-coverletter-information
+      <coverletter-information
         :information="cv.company"/>
-      <lh-cv-coverletter-text
+      <coverletter-text
         :person="cv.person"
         :company="cv.company"
         :coverletter="cv.coverletter" />
-    </lh-cv-page>
-    <lh-cv-page
+    </page>
+    <page
       :isFirst="true"
       :settings="cv.settings"
       :footer="cv.footer">
-      <lh-cv-header
+      <page-header
         :name="cv.person.name" />
       <div 
         class="main">
-        <lh-cv-list
+        <list
           v-if="cv.education.items"
           :object="cv.education"
           :settings="cv.settings" />
-        <lh-cv-list
+        <list
           v-if="cv.experienceFirstPage.items"
           :object="cv.experienceFirstPage"
           :settings="cv.settings" />
       </div>
-      <lh-cv-skills-list 
+      <skills-list 
         class="skills"
         v-if="cv.skills.items"
         :object="cv.skills"
         :settings="cv.settings" />
-    </lh-cv-page>
-    <lh-cv-page
+    </page>
+    <page
       :settings="cv.settings"
       :footer="cv.footer">
-      <lh-cv-list
+      <list
         v-if="cv.experienceSecondPage.items"
         :object="cv.experienceSecondPage"
         :settings="cv.settings" />
-      <lh-cv-list
+      <list
         v-if="cv.voluntary.items"
         class="voluntary"
         :object="cv.voluntary"
         :settings="cv.settings" />
-    </lh-cv-page>
+    </page>
   </section>
 </template>
 
 <script>
-import LhCvPage from '~/components/LhCvPage.vue'
-import LhCvCoverletterInformation from '~/components/LhCvCoverletterInformation.vue'
-import LhCvCoverletterText from '~/components/LhCvCoverletterText.vue'
-import LhCvList from '~/components/LhCvList.vue'
-import LhCvSkillsList from '~/components/LhCvSkillsList.vue'
-import LhCvHeader from '~/components/LhCvHeader.vue'
+import Page from '~/components/Page.vue'
+import PageHeader from '~/components/PageHeader.vue'
+import CoverletterInformation from '~/components/CoverletterInformation.vue'
+import CoverletterText from '~/components/CoverletterText.vue'
+import List from '~/components/List.vue'
+import SkillsList from '~/components/SkillsList.vue'
 import cv from '~/assets/cv.yml'
 
 export default {
   name: 'Cv',
   components: {
-    LhCvPage,
-    LhCvCoverletterInformation,
-    LhCvCoverletterText,
-    LhCvList,
-    LhCvSkillsList,
-    LhCvHeader
+    Page,
+    PageHeader,
+    CoverletterInformation,
+    CoverletterText,
+    List,
+    SkillsList
   },
   data() {
     return {

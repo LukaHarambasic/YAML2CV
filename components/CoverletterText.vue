@@ -54,7 +54,7 @@
 
 <script>
   export default {
-    name: 'LhCvCoverletterText',
+    name: 'CoverletterText',
     props: {
       person: {
         type: Object,

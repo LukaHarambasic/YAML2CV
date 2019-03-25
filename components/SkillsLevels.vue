@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'LhCvSkillsLevels',
+  name: 'SkillsLevels',
   props: {
     object: {
       required: true,

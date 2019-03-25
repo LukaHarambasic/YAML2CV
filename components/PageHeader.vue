@@ -10,7 +10,7 @@
 
 <script>
   export default {
-    name: 'LhCvHeader',
+    name: 'Header',
     props: {
       name: {
         required: true,

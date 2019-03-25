@@ -43,7 +43,7 @@
 
 <script>
 export default {
-  name: 'LhCvListItem',
+  name: 'ListItem',
   props: {
     item: {
       required: true,

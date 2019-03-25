@@ -1,10 +1,10 @@
 <template>
   <aside>
-    <lh-cv-list-headline
+    <page-headline
       v-if="object.title"
       :title="object.title" />
     <div v-if="settings.showSkillLevel">
-      <lh-cv-skills-levels
+      <skills-levels
         class="skillsList"
         v-for="(skills, index) in object.items"
         :key="index"
@@ -12,7 +12,7 @@
         :settings="settings" />
     </div>
     <div v-else>
-      <lh-cv-skills
+      <skills-items
         class="skillsList"
         v-for="(skills, index) in object.items"
         :key="index"
@@ -22,15 +22,16 @@
 </template>
 
 <script>
-import LhCvSkills from '~/components/LhCvSkills'
-import LhCvSkillsLevels from '~/components/LhCvSkillsLevels'
-import LhCvListHeadline from '~/components/LhCvListHeadline'
+import SkillsItems from '~/components/SkillsItems'
+import SkillsLevels from '~/components/SkillsLevels'
+import PageHeadline from '~/components/PageHeadline'
+
 export default {
-  name: 'LhCvSkillsList',
+  name: 'SkillsList',
   components: {
-    LhCvSkills,
-    LhCvSkillsLevels,
-    LhCvListHeadline
+    SkillsItems,
+    SkillsLevels,
+    PageHeadline
   },
   props: {
     object: {
