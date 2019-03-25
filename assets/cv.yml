@@ -3,20 +3,37 @@ settings:
   showLogo: true
   useTimeLine: true
   justifyDescription: false
-  showSkillLevel: true
+  showSkillLevel: false
   maxSkillLevel: 5
   sortSkills: decreasing # increasing / decreasing / alphabetical / none
 
-name:
-  first: Luka
-  last: Harambasic
+person:
+    name:
+        first: Luka
+        last: Harambasic
+    contact:
+        phone: 034678328732
+        mail: luka@harambasic.de
+    address:
+        street: Mustermannstr.
+        housenumber: 7
+        zip: 67066
+        city: Oppau
+        country: Germany
 
-address:
-    street: Mustermanstr.
-    housenumber: 7
-    zip: 67066
-    city: Oppau
-    country: Germany
+company:
+    company: SAP SE
+    department: HR
+    name: 
+        first: Maximiliane
+        last: Musterman
+    address:   
+        street: Mustermanstr.
+        housenumber: 7
+        zip: 67066
+        city: Oppau
+        country: Germany
+
 
 experienceFirstPage:
     title: Experience

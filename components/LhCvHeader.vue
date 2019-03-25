@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <img src="../static/Luka.png" />
+    <img src="../static/profile.png" />
     <h1>
       <span v-text="name.first" /><br/>
       <span v-text="name.last" />
@@ -29,7 +29,7 @@
     margin: 0 0 ($s * 2) 0;
     display: flex;
     flex-flow: row nowrap;
-    align-items: center;
+    align-items: flex-start;
     @media screen and (max-width: $desktop) {
       flex-flow: column nowrap;
       margin: 0;

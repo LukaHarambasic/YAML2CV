@@ -1,11 +1,20 @@
 <template>
   <section>
     <lh-cv-page
+      :settings="cv.settings"
+      :footer="cv.footer">
+      <lh-cv-coverletter-address
+        :address="cv.person"/>
+      <lh-cv-coverletter-address
+        :address="cv.company"/>
+      <h1>Anschreiben</h1>
+    </lh-cv-page>
+    <lh-cv-page
       :isFirst="true"
       :settings="cv.settings"
       :footer="cv.footer">
       <lh-cv-header
-        :name="cv.name" />
+        :name="cv.person.name" />
       <div 
         class="main">
         <lh-cv-list
@@ -41,6 +50,7 @@
 
 <script>
 import LhCvPage from '~/components/LhCvPage.vue'
+import LhCvCoverletterAddress from '~/components/LhCvCoverletterAddress.vue'
 import LhCvList from '~/components/LhCvList.vue'
 import LhCvSkillsList from '~/components/LhCvSkillsList.vue'
 import LhCvHeader from '~/components/LhCvHeader.vue'
@@ -50,6 +60,7 @@ export default {
   name: 'Cv',
   components: {
     LhCvPage,
+    LhCvCoverletterAddress,
     LhCvList,
     LhCvSkillsList,
     LhCvHeader
@@ -67,6 +78,7 @@ section {
   @media print {
     margin: 0;
     width: auto;
+    height: auto;
   }
   @media screen and (max-width: $desktop) {
     width: 100%;

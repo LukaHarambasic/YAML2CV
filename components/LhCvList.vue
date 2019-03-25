@@ -53,7 +53,7 @@ section {
   }
   ul {
     padding: 0;
-    //margin: $s-xs 0 0 0;
+    margin: 0 0 0 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

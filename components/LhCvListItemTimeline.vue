@@ -30,23 +30,24 @@ export default {
   position: relative;
   margin: 0 0 0 $s-xs;
   padding: 0 0 0 $s-s;
-  border-left: 2px #757985 solid;
+  border-left: 2px $c-secondary solid;
   &:before {
   }
   &:after {
     content: '';
-    top: 0;
+    top: 0px;
     left: -9px;
     position: absolute;
-    width: $s-s;
-    height: $s-s;
-    background: $c-white;
-    border: 2px #757985 solid;
+    width: $s-xs;
+    height: $s-xs;
+    background: $c-secondary;
+    border: $s-xxs $c-white solid;
     border-radius: 50%;
   }
   &:last-of-type {
+    border-left: 2px $c-white solid;
     > li {
-    padding: 0;
+      padding: 0;
     }
   }
 }

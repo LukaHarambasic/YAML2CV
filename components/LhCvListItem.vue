@@ -2,18 +2,6 @@
   <li
     v-if="item">
     <div
-      v-if="item.title || item.position"
-      class="header">
-      <h3
-        v-if="item.title"
-        v-text="item.title"
-        class="title" />
-      <h4
-        v-if="item.position"
-        v-text="position"
-        class="position" />
-    </div>
-    <div
       v-if="item.date.from || item.date.to || item.location"
       class="information">
       <div
@@ -32,6 +20,18 @@
         v-if="item.location"
         v-text="item.location"
         class="location" />
+    </div>
+    <div
+      v-if="item.title || item.position"
+      class="header">
+      <h3
+        v-if="item.title"
+        v-text="item.title"
+        class="title" />
+      <h4
+        v-if="item.position"
+        v-text="position"
+        class="position" />
     </div>
     <p
       v-if="item.description"
@@ -69,7 +69,7 @@ li {
   flex-flow: column wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  //@debugmargin: 0 0 $s-s 0;
+  margin: 0 0 0 0;
   padding: 0 0 $s-s 0;
   text-align: left;
   width: 100%;

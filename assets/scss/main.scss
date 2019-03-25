@@ -7,6 +7,10 @@
 html, body {
   margin: 0;
   padding: 0;
+  @media print {
+    width: $s-page-width;
+    height: $s-page-height;
+  }
 }
 
 body {
@@ -17,4 +21,9 @@ body {
   @media print {
     font-size: 12pt;
   }
+}
+
+@page {
+  size: A4;
+  margin: 0;
 }
