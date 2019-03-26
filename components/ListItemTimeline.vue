@@ -31,8 +31,6 @@ export default {
   margin: 0 0 0 $s-xs;
   padding: 0 0 0 $s-s;
   border-left: 2px $c-secondary solid;
-  &:before {
-  }
   &:after {
     content: '';
     top: 0px;
