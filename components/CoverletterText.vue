@@ -36,7 +36,8 @@
         :key="index"
         v-text="paragraph" />
     </div> 
-    <div>
+    <div
+      :class="{ signatureLines: settings.addLinesForSignature }" >
       <span
         class="farewell"
         v-if="coverletter.farewell"
@@ -69,6 +70,10 @@
         required: true
       },
       coverletter: {
+        type: Object,
+        required: true
+      },
+      settings: {
         type: Object,
         required: true
       }
@@ -119,6 +124,10 @@ section {
   }
   .text {
     margin: 0 0 $s 0;
+  }
+  
+  .signatureLines {
+    margin: 0 0 ($s * 3) 0;
   }
   .farewell {
     &::after {

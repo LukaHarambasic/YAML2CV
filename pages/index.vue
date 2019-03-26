@@ -4,13 +4,14 @@
       :settings="cv.settings"
       :footer="cv.footer">
       <coverletter-header
-        :address="cv.person.address"/>
+        :address="cv.person.address" />
       <coverletter-information
-        :information="cv.company"/>
+        :information="cv.company" />
       <coverletter-text
         :person="cv.person"
         :company="cv.company"
-        :coverletter="cv.coverletter" />
+        :coverletter="cv.coverletter"
+        :settings="cv.settings" />
     </page>
     <page
       :isFirstCv="true"

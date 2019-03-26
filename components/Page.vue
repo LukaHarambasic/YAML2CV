@@ -1,7 +1,7 @@
 <template>
   <div
     class="page"
-    :class="{ first: isFirstCv }">
+    :class="{ first: isFirstCv }" >
     <slot />
     <page-footer
       :links="footer"

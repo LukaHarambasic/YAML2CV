@@ -1,12 +1,13 @@
 ---
 settings:
-  showLogo: true
-  isImageRound: true
-  useTimeLine: true
-  justifyDescription: false
-  showSkillLevel: false
-  maxSkillLevel: 5
-  sortSkills: decreasing # increasing / decreasing / alphabetical / none
+    showLogo: true # the logo in the footer section
+    addLinesForSignature: true # add two lines to add a signatur via your pdf programm
+    isImageRound: true # do you want a round image?
+    useTimeLine: true # do you want htis dots?
+    justifyDescription: false   # should the text justified?
+    showSkillLevel: false # do you want to see skill bars?
+    maxSkillLevel: 5 # what is your maximum skill level?
+    sortSkills: decreasing # increasing / decreasing / alphabetical / none
 
 person:
     name:
