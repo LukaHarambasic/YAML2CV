@@ -1,35 +1,38 @@
 <template>
   <section>
-    <page-headline
+    <base-headline
       v-if="object.title"
-      :title="object.title" />
-    <ul v-if="settings.useTimeLine">
-      <list-item-timeline
+      :title="object.title"/>
+    <ul 
+      v-if="settings.useTimeLine">
+      <segment-list-timeline-item
         v-for="(item, index) in object.items"
         :key="index"
         :item="item"
-        :justifyDescription="settings.justifyDescription" />
+        :justifyDescription="settings.justifyDescription"/>
     </ul>
-    <ul v-else>
-      <list-item
+    <ul
+      v-else>
+      <segment-list-item
         v-for="(item, index) in object.items"
         :key="index"
         :item="item"
-        :justifyDescription="settings.justifyDescription" />
+        :justifyDescription="settings.justifyDescription"/>
     </ul>
   </section>
 </template>
 
 <script>
-import ListItem from '~/components/ListItem'
-import ListItemTimeline from '~/components/ListItemTimeline'
-import PageHeadline from '~/components/PageHeadline'
+import SegmentListItem from '~/components/SegmentListItem'
+import SegmentListTimelineItem from '~/components/SegmentListTimelineItem'
+import BaseHeadline from '~/components/BaseHeadline'
+
 export default {
-  name: 'List',
+  name: 'SegmentList',
   components: {
-    ListItem,
-    ListItemTimeline,
-    PageHeadline
+    SegmentListItem,
+    SegmentListTimelineItem,
+    BaseHeadline
   },
   props: {
     object: {

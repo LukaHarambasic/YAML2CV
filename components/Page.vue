@@ -1,12 +1,12 @@
 <template>
   <div
     class="page"
-    :class="{ first: isFirstCv }" >
+    :class="{ first: isFirstCv }">
     <slot />
     <page-footer
       :links="footer"
       :isFirst="isFirstCv"
-      :showLogo="settings.showLogo" />
+      :showLogo="settings.showLogo"/>
   </div>
 </template>
 

@@ -17,17 +17,17 @@
       :isFirstCv="true"
       :settings="cv.settings"
       :footer="cv.footer">
-      <page-header
+      <segment-header
         :name="cv.person.name"
         :information="cv.person.information"
         :settings="cv.settings" />
       <div 
         class="main">
-        <list
+        <segment-list
           v-if="cv.education.items"
           :object="cv.education"
           :settings="cv.settings" />
-        <list
+        <segment-list
           v-if="cv.experienceFirstPage.items"
           :object="cv.experienceFirstPage"
           :settings="cv.settings" />
@@ -41,11 +41,11 @@
     <page
       :settings="cv.settings"
       :footer="cv.footer">
-      <list
+      <segment-list
         v-if="cv.experienceSecondPage.items"
         :object="cv.experienceSecondPage"
         :settings="cv.settings" />
-      <list
+      <segment-list
         v-if="cv.voluntary.items"
         class="voluntary"
         :object="cv.voluntary"
@@ -56,23 +56,25 @@
 
 <script>
 import Page from '~/components/Page.vue'
-import PageHeader from '~/components/PageHeader.vue'
 import CoverletterHeader from '~/components/CoverletterHeader.vue'
 import CoverletterInformation from '~/components/CoverletterInformation.vue'
 import CoverletterText from '~/components/CoverletterText.vue'
-import List from '~/components/List.vue'
+import SegmentHeader from '~/components/SegmentHeader.vue'
+import SegmentList from '~/components/SegmentList.vue'
 import SkillsList from '~/components/SkillsList.vue'
 import cv from '~/assets/cv.yml'
+
+/* TODO: Change all props from required to default -> so flatten them -> google */
 
 export default {
   name: 'Cv',
   components: {
     Page,
-    PageHeader,
     CoverletterHeader,
     CoverletterInformation,
     CoverletterText,
-    List,
+    SegmentHeader,
+    SegmentList,
     SkillsList
   },
   data() {

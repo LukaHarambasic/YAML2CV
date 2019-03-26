@@ -2,16 +2,17 @@
   <section>
     <h3
       v-if="object.title"
-      v-text="object.title" />
+      v-text="object.title"/>
     <ul>
       <li
         v-for="(skill, index) in sortedSkills"
         :key="index">
-        <h4 v-text="skill.title" />
+        <h4 
+          v-text="skill.title"/>
         <div class="bar">
           <div 
             class="filled"
-            :style="{width: ((skill.level / settings.maxSkillLevel) * 100) + '%'}" />
+            :style="{ width: `${skillPercentage(skill.level)}%` }"/>
         </div>
       </li>
     </ul>
@@ -48,6 +49,11 @@ export default {
         default:
           return skills
       }
+    }
+  },
+  methods: {
+    skillPercentage(level) {
+      return ((level / this.settings.maxSkillLevel) * 100)
     }
   }
 }

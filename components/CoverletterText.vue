@@ -34,10 +34,10 @@
       <p 
         v-for="(paragraph, index) in coverletter.paragraphs" 
         :key="index"
-        v-text="paragraph" />
+        v-text="paragraph"/>
     </div> 
     <div
-      :class="{ signatureLines: settings.addLinesForSignature }" >
+      :class="{ signatureLines: settings.addLinesForSignature }">
       <span
         class="farewell"
         v-if="coverletter.farewell"

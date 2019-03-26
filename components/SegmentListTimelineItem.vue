@@ -1,16 +1,18 @@
 <template>
-  <div class="timeline">
-    <list-item
+  <div 
+    class="timeline">
+    <segment-list-item
       :item="item"
-      :justifyDescription="justifyDescription" />
+      :justifyDescription="justifyDescription"/>
   </div>
 </template>
 
 <script>
-import ListItem from '~/components/ListItem'
+import SegmentListItem from '~/components/SegmentListItem'
+
 export default {
   components: {
-    ListItem
+    SegmentListItem
   },
   props: {
     item: {

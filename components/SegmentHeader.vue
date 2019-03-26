@@ -2,11 +2,11 @@
   <header>
     <img 
       :class="{ round: settings.isImageRound}"
-      src="../static/new.jpg" />
+      src="../static/new.jpg"/> <!-- TODO:Add to settings -->
     <div class="nameInformation">
       <h1>
-        <span v-text="name.first" /><br/>
-        <span v-text="name.last" />
+        <span v-text="name.first"/><br/>
+        <span v-text="name.last"/>
       </h1>
       <div 
         class="information"
@@ -14,7 +14,7 @@
         <span 
           v-for="(item, index) in information" 
           :key="index" 
-          v-text="item" />
+          v-text="item"/>
       </div>
     </div>
   </header>
@@ -22,7 +22,7 @@
 
 <script>
   export default {
-    name: 'Header',
+    name: 'SegmentHeader',
     props: {
       name: {
         required: true,

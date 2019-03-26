@@ -10,16 +10,16 @@
         <div
           v-if="item.date.from"
           v-text="item.date.from"
-          class="from" />
+          class="from"/>
         <div
           v-if="item.date.to"
           v-text="item.date.to"
-          class="to" />
+          class="to"/>
       </div>
       <div
         v-if="item.location"
         v-text="item.location"
-        class="location" />
+        class="location"/>
     </div>
     <div
       v-if="item.title || item.position"
@@ -27,23 +27,23 @@
       <h3
         v-if="item.title"
         v-text="item.title"
-        class="title" />
+        class="title"/>
       <h4
         v-if="item.position"
         v-text="position"
-        class="position" />
+        class="position"/>
     </div>
     <p
       v-if="item.description"
       v-html="item.description"
       :class="{ justify: justifyDescription }"
-      class="description" />
+      class="description"/>
   </li>
 </template>
 
 <script>
 export default {
-  name: 'ListItem',
+  name: 'SegmentListItem',
   props: {
     item: {
       required: true,

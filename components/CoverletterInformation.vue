@@ -1,16 +1,19 @@
 <template>
   <address>
-    <div class="company">
+    <div 
+      class="company">
       <span 
         v-if="information.company"
         v-text="information.company" />
     </div>
-    <div class="department">
+    <div 
+      class="department">
       <span 
         v-if="information.department"
         v-text="information.department" />
     </div>
-    <div class="name">
+    <div 
+      class="name">
       <span 
         v-if="information.name"
         v-text="information.name.first" />
@@ -18,37 +21,42 @@
         v-if="information.name" 
         v-text="information.name.last" />
     </div>
-    <div class="streetHousenumber">
+    <div 
+      class="streetHousenumber">
       <span 
         v-if="information.address"
         v-text="information.address.street" />
     </div>
-    <div class="city">
+    <div 
+      class="city">
       <span 
         v-if="information.address" 
         v-text="information.address.city" />
     </div>
-    <div class="country">
+    <div 
+      class="country">
       <span 
         v-if="information.address"
         v-text="information.address.country" />
     </div>
-    <div class="phone">
+    <div 
+      class="phone">
       <span 
         v-if="information.contact"
-        v-text="information.contact.phone" />
+        v-text="information.contact.phone"/>
     </div>
-    <div class="mail">
+    <div 
+      class="mail">
       <span 
         v-if="information.contact"
-        v-text="information.contact.mail" />
+        v-text="information.contact.mail"/>
     </div>
   </address>
 </template>
 
 <script>
   export default {
-    name: 'CoverletterInfomration',
+    name: 'CoverletterInformation',
     props: {
       information: {
         type: Object,

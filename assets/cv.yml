@@ -5,7 +5,7 @@ settings:
     isImageRound: true # do you want a round image?
     useTimeLine: true # do you want htis dots?
     justifyDescription: false   # should the text justified?
-    showSkillLevel: false # do you want to see skill bars?
+    showSkillLevel: true # do you want to see skill bars?
     maxSkillLevel: 5 # what is your maximum skill level?
     sortSkills: decreasing # increasing / decreasing / alphabetical / none
 

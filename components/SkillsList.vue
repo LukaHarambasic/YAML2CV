@@ -1,22 +1,24 @@
 <template>
   <aside>
-    <page-headline
+    <base-headline
       v-if="object.title"
-      :title="object.title" />
-    <div v-if="settings.showSkillLevel">
+      :title="object.title"/>
+    <div 
+      v-if="settings.showSkillLevel"> 
       <skills-levels
         class="skillsList"
         v-for="(skills, index) in object.items"
         :key="index"
         :object="skills"
-        :settings="settings" />
+        :settings="settings"/>
     </div>
-    <div v-else>
+    <div 
+      v-else>
       <skills-items
         class="skillsList"
         v-for="(skills, index) in object.items"
         :key="index"
-        :object="skills" />
+        :object="skills"/>
     </div>
   </aside>
 </template>
@@ -24,14 +26,14 @@
 <script>
 import SkillsItems from '~/components/SkillsItems'
 import SkillsLevels from '~/components/SkillsLevels'
-import PageHeadline from '~/components/PageHeadline'
+import BaseHeadline from '~/components/BaseHeadline'
 
 export default {
   name: 'SkillsList',
   components: {
     SkillsItems,
     SkillsLevels,
-    PageHeadline
+    BaseHeadline
   },
   props: {
     object: {
