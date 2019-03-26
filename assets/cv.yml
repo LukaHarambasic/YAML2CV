@@ -1,6 +1,7 @@
 ---
 settings:
   showLogo: true
+  isImageRound: true
   useTimeLine: true
   justifyDescription: false
   showSkillLevel: false
@@ -11,12 +12,12 @@ person:
     name:
         first: Luka
         last: Harambasic
-    information:
-        - German
-        - 03.09.2000
-        - Oppau
-        - mehr
-        - mehr
+    # information:
+    #     - German
+    #     - 03.09.2000
+    #     - Oppau
+    #     - mehr
+    #     - mehr
     address:
         street: Mustermannstr.
         housenumber: 7

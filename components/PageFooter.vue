@@ -85,18 +85,6 @@ footer {
     margin: 0;
     padding: $s-s 0 $s 0;
   }
-/*   &::after{
-    @media print {
-      content: '';
-      position: absolute;
-      z-index: 1000;
-      background: $c-primary;
-      bottom: 0;
-      left: 0;
-      width: $s-page-width;
-      height: 2px;
-    }
-  } */
   &.first {
     @media screen and (max-width: $desktop) {
       display:none;

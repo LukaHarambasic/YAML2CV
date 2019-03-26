@@ -1,6 +1,8 @@
 <template>
   <header>
-    <img src="../static/profile.png" />
+    <img 
+      :class="{ round: settings.isImageRound}"
+      src="../static/new.jpg" />
     <div class="nameInformation">
       <h1>
         <span v-text="name.first" /><br/>
@@ -30,6 +32,10 @@
         default: null,
         type: Array
       },
+      settings: {
+        required: true,
+        type: Object
+      },
     }
   }
 </script>
@@ -49,6 +55,7 @@
     img {
       max-height: 100%;
       border-radius: $radius 0 0 0;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
       @media screen and (max-width: $desktop) {
         border-radius: $radius $radius 0 0;
         margin: $s-xl 0 0 0;
@@ -57,6 +64,9 @@
       }
       @media print {
         max-height: 12rem;
+      }
+      &.round {
+        border-radius: 50%;
       }
     }
     .nameInformation {

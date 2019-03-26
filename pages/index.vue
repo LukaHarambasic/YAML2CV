@@ -18,7 +18,8 @@
       :footer="cv.footer">
       <page-header
         :name="cv.person.name"
-        :information="cv.person.information" />
+        :information="cv.person.information"
+        :settings="cv.settings" />
       <div 
         class="main">
         <list
