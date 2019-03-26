@@ -6,7 +6,7 @@
       <coverletter-header
         :address="person.address"/>
       <coverletter-information
-        :title="company.name"
+        :title="company.title"
         :department="company.department"
         :name="company.name"
         :address="company.address"
