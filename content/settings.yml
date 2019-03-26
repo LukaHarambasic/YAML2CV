@@ -3,7 +3,7 @@
 logoPath: logo.svg
 # add two lines to add a signatur via your pdf programm
 addLinesForSignature: true 
-# add image path, deafult is profile.jpg (can be found in static)
+# add image path, default is profile.jpg, leave empty if you don't want a logo (can be found in static)
 imagePath: profile.jpg
 # do you want a round image?
 isImageRound: true 
