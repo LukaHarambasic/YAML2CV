@@ -1,0 +1,34 @@
+title: Experience
+segments:
+  -
+    title: SAP SE
+    position: User Experience Design
+    description: SAP Analytics Cloud - Creating a prototype with new functionalities based on customer feedback.
+    location: Walldorf, Germany
+    date:
+      from: 08/2018
+      to: 11/2018
+  -
+    title: SAP SE
+    position: Consulting
+    description: Utilities and Waste - IoT (photovoltaic) showcase for municipal utilities.
+    location: Dresden, Germany
+    date:
+      from: 02/2018
+      to: 05/2018
+  -
+    title: SAP SE
+    position: SAPUI5 Development
+    description: Innovation Center Network (SAP Work-Life) - Developing a Custom Control to edit and display formatted text in SAPUI5.
+    location: Walldorf, Germany
+    date:
+      from: 08/2017
+      to: 11/2017
+  -
+    title: SAP SE
+    position: Webdevelopment
+    description: Global Design Enablement - Developing an internal tool and conceptualize a new software to simplify existing processes.
+    location: Walldorf, Germany
+    date:
+      from: 01/2017
+      to: 04/2017

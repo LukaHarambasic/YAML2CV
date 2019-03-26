@@ -1,64 +1,77 @@
 <template>
-  <li
-    v-if="item">
+  <li>
     <div
-      v-if="item.date.from || item.date.to || item.location"
-      class="information">
+      class="information"
+      v-if="date.from || date.to || location">
       <div
-        v-if="item.date.from || item.date.to"
-        class="date">
+        class="date"
+        v-if="date.from || date.to">
         <div
-          v-if="item.date.from"
-          v-text="item.date.from"
-          class="from" />
+          class="from"
+          v-if="date.from"
+          v-text="date.from"/>
         <div
-          v-if="item.date.to"
-          v-text="item.date.to"
-          class="to" />
+          class="to"
+          v-if="date.to"
+          v-text="date.to"/>
       </div>
       <div
-        v-if="item.location"
-        v-text="item.location"
-        class="location" />
+        class="location"
+        v-if="location"
+        v-text="location"/>
     </div>
     <div
-      v-if="item.title || item.position"
-      class="header">
+      class="header"
+      v-if="title || position">
       <h3
-        v-if="item.title"
-        v-text="item.title"
-        class="title" />
+        class="title"
+        v-if="title"
+        v-text="title"/>
       <h4
-        v-if="item.position"
-        v-text="position"
-        class="position" />
+        class="position"
+        v-if="position"
+        v-text="`(${position})`"/>
     </div>
     <p
-      v-if="item.description"
-      v-html="item.description"
-      :class="{ justify: justifyDescription }"
-      class="description" />
+      class="description"
+      v-if="description"
+      v-html="description"
+      :class="{ justify: justifyDescription }"/>
   </li>
 </template>
 
 <script>
 export default {
-  name: 'ListItem',
+  name: 'SegmentListItem',
   props: {
-    item: {
-      required: true,
-      type: Object
+    title: {
+      default: '',
+      type: String
+    },
+    description: {
+      default: '',
+      type: String
+    },
+    position: {
+      default: '',
+      type: String
+    },
+    location: {
+      default: '',
+      type: String
+    },
+    date: {
+      default: null,
+      type: Object,
+      validator: (date) => {
+        return date.hasOwnProperty('to') && date.hasOwnProperty('from')
+      }
     },
     justifyDescription: {
       default: false,
       type: Boolean
     }
   },
-  computed: {
-    position() {
-      return `(${this.item.position})`
-    }
-  }
 }
 </script>
 

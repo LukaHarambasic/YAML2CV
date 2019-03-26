@@ -1,5 +1,6 @@
 <template>
   <h2
+    v-if="title"
     v-text="title" />
 </template>
 
@@ -9,7 +10,7 @@ export default {
   props: {
     title: {
       type: String,
-      required: true
+      default: ''
     },
   }
 }

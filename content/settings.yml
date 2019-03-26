@@ -1,0 +1,19 @@
+---
+# the logo in the footer section, leave empty if you don't want a logo (can be found in static)
+logoPath: logo.svg
+# add two lines to add a signatur via your pdf programm
+addLinesForSignature: true 
+# add image path, deafult is profile.jpg (can be found in static)
+imagePath: profile.jpg
+# do you want a round image?
+isImageRound: true 
+# do you want this dots?
+useTimeline: true 
+# should the text justified?
+justifyDescription: false
+# do you want to see skill bars?
+showSkillLevel: false 
+# what is your maximum skill level?
+maxSkillLevel: 5 
+# do you want the skills sorted? Here are your options: increasing / decreasing / alphabetical / none
+sortSkillsBy: decreasing 

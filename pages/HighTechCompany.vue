@@ -85,13 +85,13 @@ import SegmentList from '~/components/SegmentList.vue'
 import SkillsList from '~/components/SkillsList.vue'
 
 import settings from '~/content/settings.yml'
-import coverletter from '~/content/coverletter.yml'
-import company from '~/content/company.yml'
+import coverletter from '~/content/HighTechCompany/coverletter.yml' //CUSTOMIZED
+import company from '~/content/HighTechCompany/company.yml' //CUSTOMIZED
 import person from '~/content/person.yml'
 import experienceFirstPage from '~/content/experienceFirstPage.yml'
 import experienceSecondPage from '~/content/experienceSecondPage.yml'
 import education from '~/content/education.yml'
-import skills from '~/content/skills.yml'
+import skills from '~/content/HighTechCompany/skills.yml' //CUSTOMIZED
 import voluntary from '~/content/voluntary.yml'
 import footer from '~/content/footer.yml'
 

@@ -1,0 +1,87 @@
+---
+title: Skills
+lists: 
+  -
+    title: Development
+    skills:
+      - 
+        title: JavaScript
+        level: 4
+      - 
+        title: Vue.js
+        level: 4
+      - 
+        title: SAPUI5
+        level: 3
+      - 
+        title: HTML5
+        level: 4
+      - 
+        title: CSS3
+        level: 4
+      - 
+        title: Git
+        level: 3
+      - 
+        title: Python
+        level: 3
+      - 
+        title: SAP HANA
+        level: 2
+      - 
+        title: SAP CP
+        level: 3
+      - 
+        title: SQL
+        level: 4
+      - 
+        title: Java/Kotlin
+        level: 2
+      - 
+        title: PHP
+        level: 1
+  -
+    title: Software
+    skills:
+      - 
+        title: Office 365
+        level: 2
+      - 
+        title: G Suite
+        level: 4
+      - 
+        title: Sketch
+        level: 3
+      - 
+        title: Figma
+        level: 3
+      - 
+        title: Zapier
+        level: 3
+  -
+    title: Others
+    skills:
+      - 
+        title: PM
+        level: 3
+      - 
+        title: Scrum
+        level: 4
+      - 
+        title: Design
+        level: 3
+      - 
+        title: Communication
+        level: 4
+      - 
+        title: Presentation
+        level: 4
+  -
+    title: Languages
+    skills:
+      - 
+        title: German
+        level: 5
+      - 
+        title: English
+        level: 4

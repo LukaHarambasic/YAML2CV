@@ -1,0 +1,17 @@
+---
+title: Education
+segments:
+  -
+    title: Student at the Corporative State University Baden-Württemberg (DHBW)
+    description: Business Informatics (focusing on Sales and Consulting) at SAP
+    location: Mannheim, Germany
+    date:
+      from: 09/2016
+      to: today
+  -
+    title: Wirtschaftsgymnasium BBS W1 (Highschool focusing on Business Studies)
+    description: "Advanced Courses: Business Administration, Information Technology, Mathematics"
+    location: Ludwigshafen, Germany
+    date:
+      from: 07/2012
+      to: 07/2015

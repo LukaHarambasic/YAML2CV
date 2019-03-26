@@ -4,54 +4,56 @@
       class="locationDate">
       <span
         class="location"
-        v-if="person.address"
-        v-text="person.address.city"/>
+        v-if="city"
+        v-text="city"/>
       <span
         class="date"
-        v-text="today"/>
+        v-if="date"
+        v-text="date"/>
     </div>
     <h2
       class="headline"
-      v-if="coverletter.headline"
-      v-text="coverletter.headline"/>
+      v-if="headline"
+      v-text="headline"/>
     <div
       class="welcome">
       <span
         class="greeting"
-        v-if="coverletter.greeting"
-        v-text="coverletter.greeting"/>
+        v-if="greeting"
+        v-text="greeting"/>
       <span
         class="speech"
-        v-if="company.name"
-        v-text="company.name.speech"/>
+        v-if="companyName.speech"
+        v-text="companyName.speech"/>
       <span
         class="lastname"
-        v-if="company.name"
-        v-text="company.name.last"/>
+        v-if="companyName.last"
+        v-text="companyName.last"/>
     </div>
     <div
       class="text">
       <p 
-        v-for="(paragraph, index) in coverletter.paragraphs" 
+        v-for="(paragraph, index) in paragraphs" 
         :key="index"
-        v-text="paragraph" />
+        v-html="paragraph"/>
     </div> 
-    <div>
+    <div
+      :class="{ signatureLines: addLinesForSignature }">
       <span
         class="farewell"
-        v-if="coverletter.farewell"
-        v-text="coverletter.farewell"/>
+        v-if="farewell"
+        v-text="farewell"/>
     </div>
     <div
       class="name">
       <span
         class="firstname"
-        v-if="person.name"
-        v-text="person.name.first"/>
+        v-if="personName"
+        v-text="personName.first"/>
       <span
       class="lastname"
-        v-if="person.name"
-        v-text="person.name.last"/>
+        v-if="personName"
+        v-text="personName.last"/>
     </div>
   </section>
 </template>
@@ -60,32 +62,69 @@
   export default {
     name: 'CoverletterText',
     props: {
-      person: {
+      companyName: {
+        default: null,
         type: Object,
-        required: true
+        validator: (value) => {
+          const props = ['speech', 'first', 'last']
+          return props.every( key => key in value )
+        }
       },
-      company: {
+      personName: {
+        default: null,
         type: Object,
-        required: true
+        validator: (value) => {
+          const props = ['first', 'last']
+          return props.every( key => key in value )
+        }
       },
-      coverletter: {
-        type: Object,
-        required: true
-      }
+      city: {
+        default: '',
+        type: String
+      },
+      manualDate: {
+        default: '',
+        type: String
+      },
+      greeting: {
+        default: '',
+        type: String
+      },
+      headline: {
+        default: '',
+        type: String
+      },
+      paragraphs: {
+        default: null,
+        type: Array
+      },
+      farewell: {
+        default: '',
+        type: String
+      },
+      addLinesForSignature: {
+        default: false,
+        type: Boolean
+      },
     },
     computed: {
-      today() {
-        const today = new Date()
-        let day = today.getDay()
-        let month = today.getMonth() + 1
-        let year = today.getFullYear()
-        if (day < 10) {
-          day = '0' + day
-        } 
-        if (month < 10) {
-          month = '0' + month
-        } 
-        return `${day}.${month}.${year}`
+      date() {
+        if(!!this.manualDate) {
+          const today = new Date()
+          let day = today.getDay()
+          let month = today.getMonth() + 1
+          let year = today.getFullYear()
+          if (day < 10) {
+            day = '0' + day
+          } 
+          if (month < 10) {
+            month = '0' + month
+          } 
+          return `${day}.${month}.${year}`
+        }
+        else {
+          return this.manualDate
+        }
       }
     }
   }
@@ -106,6 +145,7 @@ section {
   }
   .headline {
     font-size: $fs-m;
+    color: $c-font-headline;
     margin: $s-s 0 $s-xl 0;
   }
   .welcome {
@@ -119,10 +159,9 @@ section {
   .text {
     margin: 0 0 $s 0;
   }
-  .farewell {
-    &::after {
-      content: ',';
-    }
+  
+  .signatureLines {
+    margin: 0 0 ($s * 3) 0;
   }
 }
 </style>
