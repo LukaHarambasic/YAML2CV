@@ -13,16 +13,12 @@ person:
         first: Luka
         last: Harambasic
     # information:
-    #     - German
-    #     - 03.09.2000
-    #     - Oppau
-    #     - mehr
-    #     - mehr
+    #     - Musterstraße 7
+    #     - 68161 Mannheim
+    #     - Germany
     address:
-        street: Mustermannstr.
-        housenumber: 7
-        zip: 67066
-        city: Oppau
+        street: Mustermannstr. 7
+        city: 67066 Oppau
         country: Germany
 
 company:
@@ -33,10 +29,8 @@ company:
         first: Maximiliane
         last: Mustermann
     address:   
-        street: Mustermanstr.
-        housenumber: 7
-        zip: 67066
-        city: Oppau
+        street: Mustermanstr. 7
+        city: 67066 Walldorf
         country: Germany
 
 coverletter:

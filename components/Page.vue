@@ -1,11 +1,11 @@
 <template>
   <div
     class="page"
-    :class="{ first: isFirst}">
+    :class="{ first: isFirstCv }">
     <slot />
     <page-footer
       :links="footer"
-      :isFirst="isFirst"
+      :isFirst="isFirstCv"
       :showLogo="settings.showLogo" />
   </div>
 </template>
@@ -18,7 +18,7 @@ export default {
     PageFooter
   },
   props: {
-    isFirst: {
+    isFirstCv: {
       type: Boolean,
       default: false
     },

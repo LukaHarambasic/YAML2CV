@@ -3,8 +3,8 @@
     <page
       :settings="cv.settings"
       :footer="cv.footer">
-      <coverletter-information
-        :information="cv.person"/>
+      <coverletter-header
+        :address="cv.person.address"/>
       <coverletter-information
         :information="cv.company"/>
       <coverletter-text
@@ -13,7 +13,7 @@
         :coverletter="cv.coverletter" />
     </page>
     <page
-      :isFirst="true"
+      :isFirstCv="true"
       :settings="cv.settings"
       :footer="cv.footer">
       <page-header
@@ -56,6 +56,7 @@
 <script>
 import Page from '~/components/Page.vue'
 import PageHeader from '~/components/PageHeader.vue'
+import CoverletterHeader from '~/components/CoverletterHeader.vue'
 import CoverletterInformation from '~/components/CoverletterInformation.vue'
 import CoverletterText from '~/components/CoverletterText.vue'
 import List from '~/components/List.vue'
@@ -67,6 +68,7 @@ export default {
   components: {
     Page,
     PageHeader,
+    CoverletterHeader,
     CoverletterInformation,
     CoverletterText,
     List,

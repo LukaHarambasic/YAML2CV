@@ -22,14 +22,8 @@
       <span 
         v-if="information.address"
         v-text="information.address.street" />
-      <span 
-        v-if="information.address" 
-        v-text="information.address.housenumber" />
     </div>
-    <div class="zipCity">
-      <span 
-        v-if="information.address"
-        v-text="information.address.zip" />
+    <div class="city">
       <span 
         v-if="information.address" 
         v-text="information.address.city" />
@@ -67,7 +61,7 @@
 <style lang="scss" scoped>
 address {
   width: 100%;
-  margin: 0 0 ($s * 3) 0;
+  margin: $s 0 ($s * 3) 0;
   font-style: normal;
 }
 </style>

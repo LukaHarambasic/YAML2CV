@@ -103,7 +103,7 @@ footer {
     width: $s * 3;
     height: $s * 3;
     margin-top: - ($s * 1.5);
-    margin-right: $s;
+    margin-right: $s * 3;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     border-radius: 50%;
     transition: all 0.7s ease;
@@ -149,7 +149,6 @@ footer {
         text-decoration: none;
         border-bottom: 1px transparent solid;
         &:hover {
-          opacity: 0.9;
           border-bottom-color: $c-secondary;
         }
       }
