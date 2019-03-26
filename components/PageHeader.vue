@@ -1,10 +1,18 @@
 <template>
-  <header class="header">
+  <header>
     <img src="../static/profile.png" />
-    <h1>
-      <span v-text="name.first" /><br/>
-      <span v-text="name.last" />
-    </h1>
+    <div class="nameInformation">
+      <h1>
+        <span v-text="name.first" /><br/>
+        <span v-text="name.last" />
+      </h1>
+      <div class="information">
+        <span 
+          v-for="(item, index) in information" 
+          :key="index" 
+          v-text="item" />
+      </div>
+    </div>
   </header>
 </template>
 
@@ -16,14 +24,17 @@
         required: true,
         type: Object
       },
+      information: {
+        required: true,
+        type: Array
+      },
     }
   }
 </script>
 
 <style lang="scss" scoped>
-  .header {
-    //background: $c-white;
-    border-radius: $radius;
+  header {
+    background: blue;
     width: 100%;
     height: 20%;
     margin: 0 0 ($s * 2) 0;
@@ -43,16 +54,31 @@
         max-height: auto;
         max-width: 80%;
       }
+      @media print {
+        max-height: 12rem;
+      }
     }
-    h1 {
-      color: $c-white;
-      font-size: $fs-xl;
+    .nameInformation {
+      display: flex;
+      flex-flow: column nowrap;
+      align-content: stretch;
+      background: tomato;
       margin: 0 0 0 $s-xl;
-      line-height: 1;
-      display: inline;
-      @media screen and (max-width: $desktop) {
-        font-size: $fs-l*1.5;
-        margin: $s 0 $s 0;
+      height: 100%;
+      h1 {
+        color: $c-white;
+        font-size: $fs-xl;
+        line-height: 1;
+        display: inline;
+        background: yellow;
+        margin: 0;
+        @media screen and (max-width: $desktop) {
+          font-size: $fs-l*1.5;
+          margin: $s 0 $s 0;
+        }
+      }
+      .information {
+        background: limegreen;
       }
     }
   }

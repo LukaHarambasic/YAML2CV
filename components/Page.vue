@@ -58,18 +58,21 @@ export default {
     border-radius: 0;
   }
   @media print {
+    page-break-before: always;
     margin: 0;
     border-radius: 0;
     box-shadow: none;
+    height: auto;
+    width: auto;
   }
   &.first {
     background: linear-gradient(
       to bottom,
       $c-primary 0%,
       $c-primary 20%,
-      #000000 20%,
+    #000000 20%,
       $c-white 20%,
-      $c-white 100%
+      $c-white 100%,
     );
     @media screen and (max-width: $desktop) {
       border-radius: $radius $radius 0 0;

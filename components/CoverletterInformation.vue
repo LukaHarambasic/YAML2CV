@@ -68,5 +68,6 @@
 address {
   width: 100%;
   margin: 0 0 ($s * 3) 0;
+  font-style: normal;
 }
 </style>

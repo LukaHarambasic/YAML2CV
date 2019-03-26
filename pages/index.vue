@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="index">
     <page
       :settings="cv.settings"
       :footer="cv.footer">
@@ -17,7 +17,8 @@
       :settings="cv.settings"
       :footer="cv.footer">
       <page-header
-        :name="cv.person.name" />
+        :name="cv.person.name"
+        :information="cv.person.information" />
       <div 
         class="main">
         <list
@@ -79,7 +80,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-section {
+.index {
   @media print {
     margin: 0;
     width: auto;

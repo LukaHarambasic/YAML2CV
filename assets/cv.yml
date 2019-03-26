@@ -11,9 +11,10 @@ person:
     name:
         first: Luka
         last: Harambasic
-    contact:
-        phone: 034678328732
-        mail: luka@harambasic.de
+    information:
+        - German
+        - 03.09.2000
+        - Oppau
     address:
         street: Mustermannstr.
         housenumber: 7

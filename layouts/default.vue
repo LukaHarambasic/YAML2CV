@@ -25,5 +25,8 @@ main {
     box-shadow: 0 0 40px $c-primary-shadow;
     border-radius: $radius;
   }
+  @media print {
+    background: $c-white;
+  }
 }
 </style>

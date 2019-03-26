@@ -106,6 +106,7 @@ section {
   }
   .headline {
     font-size: $fs-m;
+    color: $c-font-headline;
     margin: $s-s 0 $s-xl 0;
   }
   .welcome {

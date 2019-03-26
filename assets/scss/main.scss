@@ -8,8 +8,8 @@ html, body {
   margin: 0;
   padding: 0;
   @media print {
-    width: $s-page-width;
-    height: $s-page-height;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -20,10 +20,11 @@ body {
   color: $c-font-text;
   @media print {
     font-size: 12pt;
+    background: $c-white;
   }
 }
 
 @page {
   size: A4;
-  margin: 0;
+  bleed: 0cm;
 }
