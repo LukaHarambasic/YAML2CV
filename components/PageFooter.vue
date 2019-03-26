@@ -1,6 +1,7 @@
 <template>
   <footer
-    :class="{ first: isFirst }">
+    :class="{ first: isFirst }"
+    v-if="links">
     <svg
       v-if="showLogo"
       class="logo"
@@ -47,11 +48,11 @@
     props: {
       links: {
         type: Array,
-        required: true
+        default: null
       },
       showLogo: {
         type: Boolean,
-        required: true
+        default: false
       },
       isFirst: {
         type: Boolean,
