@@ -17,8 +17,12 @@
     name: 'CoverletterHeader',
     props: {
       address: {
-        required: true,
-        type: Object
+        default: null,
+        type: Object,
+        validator: (value) => {
+          const props = ['street', 'city', 'country']
+          return props.every( key => key in value )
+        }
       }
     }
   }

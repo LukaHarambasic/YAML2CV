@@ -1,8 +1,8 @@
 <template>
   <section>
     <h3
-      v-if="object.title"
-      v-text="object.title"/>
+      v-if="title"
+      v-text="title"/>
     <ul>
       <li
         v-for="(skill, index) in sortedSkills"
@@ -23,19 +23,27 @@
 export default {
   name: 'SkillsLevels',
   props: {
-    object: {
-      required: true,
-      type: Object
+    title: {
+      default: '',
+      type: String
     },
-    settings: {
-      required: true,
-      type: Object
+    skills: {
+      default: null,
+      type: Array
+    },
+    maxSkillLevel: {
+      default: 5,
+      type: Number
+    },
+    sortSkillsBy: {
+      default: 'none',
+      type: String
     }
   },
   computed: {
     sortedSkills() {
-      const skills = this.object.items
-      switch(this.settings.sortSkills) {
+      const skills = this.skills
+      switch(this.sortSkillsBy) {
         case 'decreasing':
           return skills.sort((a, b) => b.level - a.level)
         case 'increasing':
@@ -53,7 +61,7 @@ export default {
   },
   methods: {
     skillPercentage(level) {
-      return ((level / this.settings.maxSkillLevel) * 100)
+      return ((level / this.maxSkillLevel) * 100)
     }
   }
 }

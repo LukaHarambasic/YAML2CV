@@ -1,55 +1,70 @@
 <template>
   <aside>
     <base-headline
-      v-if="object.title"
-      :title="object.title"/>
+      v-if="title"
+      :title="title"/>
     <div 
-      v-if="settings.showSkillLevel"> 
-      <skills-levels
-        class="skillsList"
-        v-for="(skills, index) in object.items"
+      v-if="showSkillLevel"> 
+      <skills-list-levels
+        class="list"
+        v-for="(list, index) in lists"
         :key="index"
-        :object="skills"
-        :settings="settings"/>
+        :title="list.title"
+        :skills="list.skills"
+        :sortSkillsBy="sortSkillsBy"
+        :maxSkillLevel="maxSkillLevel"/>
     </div>
     <div 
       v-else>
-      <skills-items
-        class="skillsList"
-        v-for="(skills, index) in object.items"
+      <skills-list-items
+        class="list"
+        v-for="(list, index) in lists"
         :key="index"
-        :object="skills"/>
+        :title="list.title"
+        :skills="list.skills"/>
     </div>
   </aside>
 </template>
 
 <script>
-import SkillsItems from '~/components/SkillsItems'
-import SkillsLevels from '~/components/SkillsLevels'
+import SkillsListItems from '~/components/SkillsListItems'
+import SkillsListLevels from '~/components/SkillsListLevels'
 import BaseHeadline from '~/components/BaseHeadline'
 
 export default {
   name: 'SkillsList',
   components: {
-    SkillsItems,
-    SkillsLevels,
+    SkillsListItems,
+    SkillsListLevels,
     BaseHeadline
   },
   props: {
-    object: {
-      required: true,
-      type: Object
+    title: {
+      default: '',
+      type: String
     },
-    settings: {
-      required: true,
-      type: Object
+    lists: {
+      default: null,
+      type: Array
+    },
+    showSkillLevel: {
+      default: true,
+      type: Boolean
+    },
+    sortSkillsBy: {
+      default: 'none',
+      type: String
+    },
+    maxSkillLevel: {
+      default: 5,
+      type: Number
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-  .skillsList {
+  .list {
     margin: 0 0 $s-xs 0;
     &:last-child {
       @media screen and (max-width: $desktop) {

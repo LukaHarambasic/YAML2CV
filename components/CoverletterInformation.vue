@@ -3,53 +3,44 @@
     <div 
       class="company">
       <span 
-        v-if="information.company"
-        v-text="information.company" />
+        v-if="title"
+        v-text="title"/>
     </div>
     <div 
       class="department">
       <span 
-        v-if="information.department"
-        v-text="information.department" />
+        v-if="department"
+        v-text="department"/>
     </div>
     <div 
       class="name">
       <span 
-        v-if="information.name"
-        v-text="information.name.first" />
+        v-if="name.speech"
+        v-text="name.speech"/>
       <span 
-        v-if="information.name" 
-        v-text="information.name.last" />
+        v-if="name.first"
+        v-text="name.first"/>
+      <span 
+        v-if="name.last" 
+        v-text="name.last"/>
     </div>
     <div 
       class="streetHousenumber">
       <span 
-        v-if="information.address"
-        v-text="information.address.street" />
+        v-if="address.street"
+        v-text="address.street"/>
     </div>
     <div 
       class="city">
       <span 
-        v-if="information.address" 
-        v-text="information.address.city" />
+        v-if="address.city" 
+        v-text="address.city"/>
     </div>
     <div 
       class="country">
       <span 
-        v-if="information.address"
-        v-text="information.address.country" />
-    </div>
-    <div 
-      class="phone">
-      <span 
-        v-if="information.contact"
-        v-text="information.contact.phone"/>
-    </div>
-    <div 
-      class="mail">
-      <span 
-        v-if="information.contact"
-        v-text="information.contact.mail"/>
+        v-if="address.country"
+        v-text="address.country"/>
     </div>
   </address>
 </template>
@@ -58,10 +49,30 @@
   export default {
     name: 'CoverletterInformation',
     props: {
-      information: {
-        type: Object,
-        required: true
+      title: {
+        default: '',
+        type: String
       },
+      department: {
+        default: '',
+        type: String
+      },
+      name: {
+        default: null,
+        type: Object,
+        validator: (value) => {
+          const props = ['speech', 'first', 'last']
+          return props.every( key => key in value )
+        }
+      },
+      address: {
+        default: null,
+        type: Object,
+        validator: (value) => {
+          const props = ['street', 'city', 'country']
+          return props.every( key => key in value )
+        }
+      }
     }
   }
 </script>

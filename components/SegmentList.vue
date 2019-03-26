@@ -1,23 +1,31 @@
 <template>
   <section>
     <base-headline
-      v-if="object.title"
-      :title="object.title"/>
+      v-if="title"
+      :title="title"/>
     <ul 
-      v-if="settings.useTimeLine">
+      v-if="useTimeline">
       <segment-list-timeline-item
-        v-for="(item, index) in object.items"
+        v-for="(segment, index) in segments"
         :key="index"
-        :item="item"
-        :justifyDescription="settings.justifyDescription"/>
+        :title="segment.title"
+        :description="segment.description"
+        :position="segment.position"
+        :location="segment.location"
+        :date="segment.date"
+        :justifyDescription="justifyDescription"/>
     </ul>
     <ul
       v-else>
       <segment-list-item
-        v-for="(item, index) in object.items"
+        v-for="(segment, index) in segments"
         :key="index"
-        :item="item"
-        :justifyDescription="settings.justifyDescription"/>
+        :title="segment.title"
+        :description="segment.description"
+        :position="segment.position"
+        :location="segment.location"
+        :date="segment.date"
+        :justifyDescription="justifyDescription"/>
     </ul>
   </section>
 </template>
@@ -35,13 +43,21 @@ export default {
     BaseHeadline
   },
   props: {
-    object: {
-      required: true,
-      type: Object
+    title: {
+      default: '',
+      type: String
     },
-    settings: {
-      required: true,
-      type: Object
+    segments: {
+      default: null,
+      type: Array
+    },
+    useTimeline: {
+      default: false,
+      type: Boolean
+    },
+    justifyDescription: {
+      default: false,
+      type: Boolean
     }
   }
 }

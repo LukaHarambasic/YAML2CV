@@ -1,9 +1,12 @@
 <template>
   <header>
     <img 
-      :class="{ round: settings.isImageRound}"
-      src="../static/new.jpg"/> <!-- TODO:Add to settings -->
-    <div class="nameInformation">
+      v-if="imagePath"
+      :class="{ round: isImageRound }"
+      :src="imagePath"/>
+    <div 
+      v-if="name"
+      class="nameInformation">
       <h1>
         <span v-text="name.first"/><br/>
         <span v-text="name.last"/>
@@ -12,9 +15,9 @@
         class="information"
         v-if="information">
         <span 
-          v-for="(item, index) in information" 
+          v-for="(point, index) in information" 
           :key="index" 
-          v-text="item"/>
+          v-text="point"/>
       </div>
     </div>
   </header>
@@ -25,17 +28,24 @@
     name: 'SegmentHeader',
     props: {
       name: {
-        required: true,
-        type: Object
+        default: null,
+        type: Object,
+        validator: (name) => {
+          return name.hasOwnProperty('first') && name.hasOwnProperty('last')
+        }
       },
       information: {
         default: null,
         type: Array
       },
-      settings: {
-        required: true,
-        type: Object
+      imagePath: {
+        default: '',
+        type: String
       },
+      isImageRound: {
+        default: false,
+        type: Boolean
+      }
     }
   }
 </script>

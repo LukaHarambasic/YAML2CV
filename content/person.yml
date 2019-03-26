@@ -1,0 +1,12 @@
+---
+name:
+  first: Luka
+  last: Harambasic
+# information:
+#   - Musterstraße 7
+#   - 68161 Mannheim
+#   - Germany
+address:
+  street: Mustermannstr. 7
+  city: 67066 Oppau
+  country: Germany

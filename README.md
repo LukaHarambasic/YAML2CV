@@ -42,3 +42,7 @@
  
 ## Technology
 This project uses [Vue.js](https://vuejs.org/) in [Nuxt.js](https://nuxtjs.org). 
+
+## Concepts
+- content should be managed from one page
+- no complex properties (object), if required the property has a custom validator to check for keys

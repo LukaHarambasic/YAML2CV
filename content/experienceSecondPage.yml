@@ -1,0 +1,18 @@
+title:
+segments:
+  -
+    title: SAP SE
+    position: SAPUI5 Development
+    description: Innovation Center Network (SAP Work-Life) - Developing a Custom Control to edit and display formatted text in SAPUI5.
+    location: Walldorf, Germany
+    date:
+      from: 08/2017
+      to: 11/2017
+  -
+    title: SAP SE
+    position: Webdevelopment
+    description: Global Design Enablement - Developing an internal tool and conceptualize a new software to simplify existing processes.
+    location: Walldorf, Germany
+    date:
+      from: 01/2017
+      to: 04/2017

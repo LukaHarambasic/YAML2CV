@@ -1,55 +1,76 @@
 <template>
   <section class="index">
     <page
-      :settings="cv.settings"
-      :footer="cv.footer">
+      :logoPath="settings.logoPath"
+      :footerLinks="footer">
       <coverletter-header
-        :address="cv.person.address" />
+        :address="person.address"/>
       <coverletter-information
-        :information="cv.company" />
+        :title="company.name"
+        :department="company.department"
+        :name="company.name"
+        :address="company.address"
+        :contact="company.contact"/>
       <coverletter-text
-        :person="cv.person"
-        :company="cv.company"
-        :coverletter="cv.coverletter"
-        :settings="cv.settings" />
+        :companyName="company.name"
+        :personName="person.name"
+        :city="person.address.city"
+        :manualDate="coverletter.manualDate"
+        :greeting="coverletter.greeting"
+        :headline="coverletter.headline"
+        :paragraphs="coverletter.paragraphs"
+        :farewell="coverletter.farewell"
+        :addLinesForSignature="settings.addLinesForSignature"/>
     </page>
     <page
       :isFirstCv="true"
-      :settings="cv.settings"
-      :footer="cv.footer">
+      :logoPath="settings.logoPath"
+      :footerLinks="footer">
       <segment-header
-        :name="cv.person.name"
-        :information="cv.person.information"
-        :settings="cv.settings" />
+        :name="person.name"
+        :information="person.information"
+        :imagePath="settings.imagePath"
+        :isImageRound="settings.isImageRound"/>
       <div 
         class="main">
         <segment-list
-          v-if="cv.education.items"
-          :object="cv.education"
-          :settings="cv.settings" />
+          v-if="education"
+          :title="education.title"
+          :segments="education.segments"
+          :useTimeline="settings.useTimeline"
+          :justifyDescription="settings.justifyDescription"/>
         <segment-list
-          v-if="cv.experienceFirstPage.items"
-          :object="cv.experienceFirstPage"
-          :settings="cv.settings" />
+          v-if="experienceFirstPage"
+          :title="experienceFirstPage.title"
+          :segments="experienceFirstPage.segments"
+          :useTimeline="settings.useTimeline"
+          :justifyDescription="settings.justifyDescription"/>
       </div>
       <skills-list 
         class="skills"
-        v-if="cv.skills.items"
-        :object="cv.skills"
-        :settings="cv.settings" />
+        v-if="skills"
+        :title="skills.title"
+        :lists="skills.lists"
+        :showSkillLevel="settings.showSkillLevel"
+        :sortSkillsBy="settings.showSkillsBy"
+        :maxSkillLevel="settings.maxSkillLevel" />
     </page>
     <page
-      :settings="cv.settings"
-      :footer="cv.footer">
+      :logoPath="settings.logoPath"
+      :footerLinks="footer">
       <segment-list
-        v-if="cv.experienceSecondPage.items"
-        :object="cv.experienceSecondPage"
-        :settings="cv.settings" />
+        v-if="experienceSecondPage"
+        :title="experienceSecondPage.title"
+        :segments="experienceSecondPage.segments"
+        :useTimeline="settings.useTimeline"
+        :justifyDescription="settings.justifyDescription"/>
       <segment-list
-        v-if="cv.voluntary.items"
         class="voluntary"
-        :object="cv.voluntary"
-        :settings="cv.settings" />
+        v-if="voluntary"
+        :title="voluntary.title"
+        :segments="voluntary.segments"
+        :useTimeline="settings.useTimeline"
+        :justifyDescription="settings.justifyDescription"/>
     </page>
   </section>
 </template>
@@ -62,9 +83,17 @@ import CoverletterText from '~/components/CoverletterText.vue'
 import SegmentHeader from '~/components/SegmentHeader.vue'
 import SegmentList from '~/components/SegmentList.vue'
 import SkillsList from '~/components/SkillsList.vue'
-import cv from '~/assets/cv.yml'
 
-/* TODO: Change all props from required to default -> so flatten them -> google */
+import settings from '~/content/settings.yml'
+import coverletter from '~/content/coverletter.yml'
+import company from '~/content/company.yml'
+import person from '~/content/person.yml'
+import experienceFirstPage from '~/content/experienceFirstPage.yml'
+import experienceSecondPage from '~/content/experienceSecondPage.yml'
+import education from '~/content/education.yml'
+import skills from '~/content/skills.yml'
+import voluntary from '~/content/voluntary.yml'
+import footer from '~/content/footer.yml'
 
 export default {
   name: 'Cv',
@@ -79,7 +108,16 @@ export default {
   },
   data() {
     return {
-      cv: cv
+      settings: settings,
+      coverletter: coverletter,
+      company: company,
+      person: person,
+      experienceFirstPage: experienceFirstPage,
+      experienceSecondPage: experienceSecondPage,
+      education: education,
+      skills: skills,
+      voluntary: voluntary,
+      footer: footer
     }
   }
 }

@@ -2,7 +2,11 @@
   <div 
     class="timeline">
     <segment-list-item
-      :item="item"
+      :title="title"
+      :description="description"
+      :position="position"
+      :location="location"
+      :date="date"
       :justifyDescription="justifyDescription"/>
   </div>
 </template>
@@ -15,9 +19,28 @@ export default {
     SegmentListItem
   },
   props: {
-    item: {
-      required: true,
-      type: Object
+    title: {
+      default: '',
+      type: String
+    },
+    description: {
+      default: '',
+      type: String
+    },
+    position: {
+      default: '',
+      type: String
+    },
+    location: {
+      default: '',
+      type: String
+    },
+    date: {
+      default: null,
+      type: Object,
+      validator: (date) => {
+        return date.hasOwnProperty('to') && date.hasOwnProperty('from')
+      }
     },
     justifyDescription: {
       default: false,

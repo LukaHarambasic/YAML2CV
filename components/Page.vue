@@ -4,9 +4,9 @@
     :class="{ first: isFirstCv }">
     <slot />
     <page-footer
-      :links="footer"
+      :links="footerLinks"
       :isFirst="isFirstCv"
-      :showLogo="settings.showLogo"/>
+      :logoPath="logoPath"/>
   </div>
 </template>
 
@@ -22,11 +22,11 @@ export default {
       type: Boolean,
       default: false
     },
-    settings: {
-      required: true,
-      type: Object
+    logoPath: {
+      type: String,
+      default: ''
     },
-    footer: {
+    footerLinks: {
       required: true,
       type: Array
     }

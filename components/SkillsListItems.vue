@@ -1,11 +1,11 @@
 <template>
   <section>
     <h3
-      v-if="object.title"
-      v-text="object.title"/>
+      v-if="title"
+      v-text="title"/>
     <ul>
       <li
-        v-for="skill in object.items"
+        v-for="skill in skills"
         :key="skill.title"
         v-text="skill.title"/>
     </ul>
@@ -16,9 +16,13 @@
 export default {
   name: 'SkillsItems',
   props: {
-    object: {
-      required: true,
-      type: Object
+    title: {
+      default: '',
+      type: String
+    },
+    skills: {
+      default: null,
+      type: Array
     }
   }
 }
