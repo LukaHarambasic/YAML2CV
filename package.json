@@ -1,7 +1,7 @@
 {
-  "name": "nuxt-markdown-template",
+  "name": "yaml2cv",
   "version": "1.0.0",
-  "description": "My super-duper Nuxt.js project",
+  "description": "YAML 2 CV Generator",
   "author": "Luka Harambasic",
   "private": true,
   "scripts": {
