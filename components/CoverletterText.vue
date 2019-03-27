@@ -148,9 +148,12 @@ section {
   }
   .welcome {
     margin: 0 0 $s 0;
-    .lastname {
-      &::after {
-        content: ',';
+    > span {
+      margin: 0 $s-xxs 0 0;
+      &:last-of-type {
+        &::after {
+          content: ',';
+        }
       }
     }
   }

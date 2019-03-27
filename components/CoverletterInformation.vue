@@ -88,5 +88,10 @@ address {
   width: 100%;
   margin: $s 0 ($s * 3) 0;
   font-style: normal;
+  .name {
+    > span {
+      margin: 0 $s-xxs 0 0;
+    }
+  }
 }
 </style>
