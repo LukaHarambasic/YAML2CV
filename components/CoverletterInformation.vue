@@ -49,35 +49,35 @@
 </template>
 
 <script>
-  export default {
-    name: 'CoverletterInformation',
-    props: {
-      title: {
-        default: '',
-        type: String
-      },
-      department: {
-        default: '',
-        type: String
-      },
-      name: {
-        default: null,
-        type: Object,
-        validator: (value) => {
-          const props = ['speech', 'first', 'last']
-          return props.every( key => key in value )
-        }
-      },
-      address: {
-        default: null,
-        type: Object,
-        validator: (value) => {
-          const props = ['street', 'zip', 'city', 'country']
-          return props.every( key => key in value )
-        }
+export default {
+  name: 'CoverletterInformation',
+  props: {
+    title: {
+      default: '',
+      type: String
+    },
+    department: {
+      default: '',
+      type: String
+    },
+    name: {
+      default: null,
+      type: Object,
+      validator: value => {
+        const props = ['speech', 'first', 'last']
+        return props.every(key => key in value)
+      }
+    },
+    address: {
+      default: null,
+      type: Object,
+      validator: value => {
+        const props = ['street', 'zip', 'city', 'country']
+        return props.every(key => key in value)
       }
     }
   }
+}
 </script>
 
 <style lang="scss" scoped>

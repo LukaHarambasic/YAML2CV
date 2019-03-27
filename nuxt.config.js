@@ -12,9 +12,16 @@ module.exports = {
     title: 'Luka Harambasic',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=no' },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1, user-scalable=no'
+      },
       { name: 'theme-color', content: '#E2EBF0' },
-      { hid: 'description', name: 'description', content: 'Come in and get to know me! :)' }
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Come in and get to know me! :)'
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -23,7 +30,7 @@ module.exports = {
   },
 
   node: {
-    fs: "empty"
+    fs: 'empty'
   },
 
   /*
@@ -34,40 +41,27 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [
-    'normalize.css/normalize.css',
-    '@/assets/scss/main.scss'
-  ],
+  css: ['normalize.css/normalize.css', '@/assets/scss/main.scss'],
 
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-  ],
+  plugins: [],
 
   /*
   ** Nuxt.js modules
   */
-  modules: [
-    [
-      'nuxt-sass-resources-loader',
-      [
-        '@/assets/scss/_settings.scss'
-      ]
-    ]
-  ],
+  modules: [['nuxt-sass-resources-loader', ['@/assets/scss/_settings.scss']]],
 
   /*
   ** Enviroment Vairbles
    */
-  env: {
-  },
+  env: {},
 
   /*
   ** Generation configuration
   */
-  generate: {
-  },
+  generate: {},
 
   /*
   ** Build configuration
@@ -79,9 +73,9 @@ module.exports = {
     extend(config, ctx) {
       config.module.rules.push({
         test: /\.ya?ml$/,
-        use: 'js-yaml-loader',
+        use: 'js-yaml-loader'
       })
-      config.resolve.alias["vue"] = "vue/dist/vue.common";
+      config.resolve.alias['vue'] = 'vue/dist/vue.common'
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({

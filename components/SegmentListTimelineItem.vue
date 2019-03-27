@@ -7,7 +7,7 @@
       :position="position"
       :location="location"
       :date="date"
-      :justifyDescription="justifyDescription"/>
+      :justify-description="justifyDescription"/>
   </div>
 </template>
 
@@ -38,7 +38,7 @@ export default {
     date: {
       default: null,
       type: Object,
-      validator: (date) => {
+      validator: date => {
         return date.hasOwnProperty('to') && date.hasOwnProperty('from')
       }
     },

@@ -6,22 +6,22 @@
     <div 
       v-if="showSkillLevel"> 
       <skills-list-levels
-        class="list"
         v-for="(list, index) in lists"
         :key="index"
         :title="list.title"
         :skills="list.skills"
-        :sortSkillsBy="sortSkillsBy"
-        :maxSkillLevel="maxSkillLevel"/>
+        :sort-skills-by="sortSkillsBy"
+        :max-skill-level="maxSkillLevel"
+        class="list"/>
     </div>
     <div 
       v-else>
       <skills-list-items
-        class="list"
         v-for="(list, index) in lists"
         :key="index"
         :title="list.title"
-        :skills="list.skills"/>
+        :skills="list.skills"
+        class="list"/>
     </div>
   </aside>
 </template>
@@ -64,12 +64,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .list {
-    margin: 0 0 $s-xs 0;
-    &:last-child {
-      @media screen and (max-width: $desktop) {
-        margin: 0
-      }
+.list {
+  margin: 0 0 $s-xs 0;
+  &:last-child {
+    @media screen and (max-width: $desktop) {
+      margin: 0;
     }
   }
+}
 </style>

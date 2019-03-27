@@ -13,7 +13,7 @@
         :position="segment.position"
         :location="segment.location"
         :date="segment.date"
-        :justifyDescription="justifyDescription"/>
+        :justify-description="justifyDescription"/>
     </ul>
     <ul
       v-else>
@@ -25,7 +25,7 @@
         :position="segment.position"
         :location="segment.location"
         :date="segment.date"
-        :justifyDescription="justifyDescription"/>
+        :justify-description="justifyDescription"/>
     </ul>
   </section>
 </template>

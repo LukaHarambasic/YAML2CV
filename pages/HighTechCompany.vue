@@ -1,8 +1,8 @@
 <template>
   <section class="index">
     <page
-      :logoPath="settings.logoPath"
-      :footerLinks="footer">
+      :logo-path="settings.logoPath"
+      :footer-links="footer">
       <coverletter-header
         :address="person.address"/>
       <coverletter-information
@@ -12,65 +12,65 @@
         :address="company.address"
         :contact="company.contact"/>
       <coverletter-text
-        :companyName="company.name"
-        :personName="person.name"
+        :company-name="company.name"
+        :person-name="person.name"
         :city="person.address.city"
-        :manualDate="coverletter.manualDate"
+        :manual-date="coverletter.manualDate"
         :greeting="coverletter.greeting"
         :headline="coverletter.headline"
         :paragraphs="coverletter.paragraphs"
         :farewell="coverletter.farewell"
-        :addLinesForSignature="settings.addLinesForSignature"/>
+        :add-lines-for-signature="settings.addLinesForSignature"/>
     </page>
     <page
-      :isFirstCv="true"
-      :logoPath="settings.logoPath"
-      :footerLinks="footer">
+      :is-first-cv="true"
+      :logo-path="settings.logoPath"
+      :footer-links="footer">
       <segment-header
         :name="person.name"
         :information="person.information"
-        :imagePath="settings.imagePath"
-        :isImageRound="settings.isImageRound"/>
+        :image-path="settings.imagePath"
+        :is-image-round="settings.isImageRound"/>
       <div 
         class="main">
         <segment-list
           v-if="education"
           :title="education.title"
           :segments="education.segments"
-          :useTimeline="settings.useTimeline"
-          :justifyDescription="settings.justifyDescription"/>
+          :use-timeline="settings.useTimeline"
+          :justify-description="settings.justifyDescription"/>
         <segment-list
           v-if="experienceFirstPage"
           :title="experienceFirstPage.title"
           :segments="experienceFirstPage.segments"
-          :useTimeline="settings.useTimeline"
-          :justifyDescription="settings.justifyDescription"/>
+          :use-timeline="settings.useTimeline"
+          :justify-description="settings.justifyDescription"/>
       </div>
       <skills-list 
-        class="skills"
         v-if="skills"
         :title="skills.title"
         :lists="skills.lists"
-        :showSkillLevel="settings.showSkillLevel"
-        :sortSkillsBy="settings.showSkillsBy"
-        :maxSkillLevel="settings.maxSkillLevel" />
+        :show-skill-level="settings.showSkillLevel"
+        :sort-skills-by="settings.showSkillsBy"
+        :max-skill-level="settings.maxSkillLevel"
+        class="skills" />
     </page>
     <page
-      :logoPath="settings.logoPath"
-      :footerLinks="footer">
+      :logo-path="settings.logoPath"
+      :footer-links="footer">
       <segment-list
         v-if="experienceSecondPage"
         :title="experienceSecondPage.title"
         :segments="experienceSecondPage.segments"
-        :useTimeline="settings.useTimeline"
-        :justifyDescription="settings.justifyDescription"/>
+        :use-timeline="settings.useTimeline"
+        :justify-description="settings.justifyDescription"/>
       <segment-list
-        class="voluntary"
         v-if="voluntary"
         :title="voluntary.title"
         :segments="voluntary.segments"
-        :useTimeline="settings.useTimeline"
-        :justifyDescription="settings.justifyDescription"/>
+        :use-timeline="settings.useTimeline"
+        :justify-description="settings.justifyDescription"
+        class="voluntary"/>
     </page>
   </section>
 </template>
@@ -146,9 +146,9 @@ export default {
       margin: $s-l 0 0 0;
     }
   }
-  .voluntary{
+  .voluntary {
     @media screen and (max-width: $desktop) {
-    margin: 0 0 $s-xl 0;
+      margin: 0 0 $s-xl 0;
     }
   }
 }

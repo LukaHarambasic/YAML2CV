@@ -1,42 +1,42 @@
 <template>
   <li>
     <div
-      class="information"
-      v-if="date.from || date.to || location">
+      v-if="date.from || date.to || location"
+      class="information">
       <div
-        class="date"
-        v-if="date.from || date.to">
+        v-if="date.from || date.to"
+        class="date">
         <div
-          class="from"
           v-if="date.from"
+          class="from"
           v-text="date.from"/>
         <div
-          class="to"
           v-if="date.to"
+          class="to"
           v-text="date.to"/>
       </div>
       <div
-        class="location"
         v-if="location"
+        class="location"
         v-text="location"/>
     </div>
     <div
-      class="header"
-      v-if="title || position">
+      v-if="title || position"
+      class="header">
       <h3
-        class="title"
         v-if="title"
+        class="title"
         v-text="title"/>
       <h4
-        class="position"
         v-if="position"
+        class="position"
         v-text="`(${position})`"/>
     </div>
     <p
-      class="description"
       v-if="description"
-      v-html="description"
-      :class="{ justify: justifyDescription }"/>
+      :class="{ justify: justifyDescription }"
+      class="description"
+      v-html="description"/>
   </li>
 </template>
 
@@ -63,7 +63,7 @@ export default {
     date: {
       default: null,
       type: Object,
-      validator: (date) => {
+      validator: date => {
         return date.hasOwnProperty('to') && date.hasOwnProperty('from')
       }
     },
@@ -71,7 +71,7 @@ export default {
       default: false,
       type: Boolean
     }
-  },
+  }
 }
 </script>
 
@@ -119,14 +119,14 @@ li {
       .from {
         margin: 0 $s-xxs 0 0;
         &::after {
-          content: "-";
+          content: '-';
           margin: 0 0 0 $s-xxs;
         }
       }
       .to {
         margin: 0 $s-xxs 0 0;
         &::after {
-          content: "•";
+          content: '•';
           margin: 0 0 0 $s-xxs;
         }
       }

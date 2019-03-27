@@ -1,11 +1,11 @@
 <template>
   <footer
-    :class="{ first: isFirst }"
-    v-if="links">
+    v-if="links"
+    :class="{ first: isFirst }">
     <img 
-      class="logo"
       v-if="logoPath"
-      :src="logoPath"/>
+      :src="logoPath"
+      class="logo">
     <ul 
       v-if="links">
       <li

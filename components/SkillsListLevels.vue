@@ -11,8 +11,8 @@
           v-text="skill.title"/>
         <div class="bar">
           <div 
-            class="filled"
-            :style="{ width: `${skillPercentage(skill.level)}%` }"/>
+            :style="{ width: `${skillPercentage(skill.level)}%` }"
+            class="filled"/>
         </div>
       </li>
     </ul>
@@ -43,16 +43,16 @@ export default {
   computed: {
     sortedSkills() {
       const skills = this.skills
-      switch(this.sortSkillsBy) {
+      switch (this.sortSkillsBy) {
         case 'decreasing':
           return skills.sort((a, b) => b.level - a.level)
         case 'increasing':
           return skills.sort((a, b) => a.level - b.level)
         case 'alphabetical':
           return skills.sort((a, b) => {
-            if (a.title < b.title) return -1;
-            else if (a.title > b.title) return 1;
-            return 0;
+            if (a.title < b.title) return -1
+            else if (a.title > b.title) return 1
+            return 0
           })
         default:
           return skills
@@ -61,7 +61,7 @@ export default {
   },
   methods: {
     skillPercentage(level) {
-      return ((level / this.maxSkillLevel) * 100)
+      return (level / this.maxSkillLevel) * 100
     }
   }
 }

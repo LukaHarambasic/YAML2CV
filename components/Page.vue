@@ -1,12 +1,12 @@
 <template>
   <div
-    class="page"
-    :class="{ first: isFirstCv }">
+    :class="{ first: isFirstCv }"
+    class="page">
     <slot />
     <page-footer
       :links="footerLinks"
-      :isFirst="isFirstCv"
-      :logoPath="logoPath"/>
+      :is-first="isFirstCv"
+      :logo-path="logoPath"/>
   </div>
 </template>
 
@@ -70,9 +70,9 @@ export default {
       to bottom,
       $c-primary 0%,
       $c-primary 20%,
-    #000000 20%,
+      #000000 20%,
       $c-white 20%,
-      $c-white 100%,
+      $c-white 100%
     );
     @media screen and (max-width: $desktop) {
       border-radius: $radius $radius 0 0;

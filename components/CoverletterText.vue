@@ -3,31 +3,31 @@
     <div
       class="locationDate">
       <span
-        class="location"
         v-if="city"
+        class="location"
         v-text="city"/>
       <span
-        class="date"
         v-if="date"
+        class="date"
         v-text="date"/>
     </div>
     <h2
-      class="headline"
       v-if="headline"
+      class="headline"
       v-text="headline"/>
     <div
       class="welcome">
       <span
-        class="greeting"
         v-if="greeting"
+        class="greeting"
         v-text="greeting"/>
       <span
-        class="speech"
         v-if="companyName.speech"
+        class="speech"
         v-text="companyName.speech"/>
       <span
-        class="lastname"
         v-if="companyName.last"
+        class="lastname"
         v-text="companyName.last"/>
     </div>
     <div
@@ -40,94 +40,93 @@
     <div
       :class="{ signatureLines: addLinesForSignature }">
       <span
-        class="farewell"
         v-if="farewell"
+        class="farewell"
         v-text="farewell"/>
     </div>
     <div
       class="name">
       <span
-        class="firstname"
         v-if="personName"
+        class="firstname"
         v-text="personName.first"/>
       <span
-      class="lastname"
         v-if="personName"
+        class="lastname"
         v-text="personName.last"/>
     </div>
   </section>
 </template>
 
 <script>
-  export default {
-    name: 'CoverletterText',
-    props: {
-      companyName: {
-        default: null,
-        type: Object,
-        validator: (value) => {
-          const props = ['speech', 'first', 'last']
-          return props.every( key => key in value )
-        }
-      },
-      personName: {
-        default: null,
-        type: Object,
-        validator: (value) => {
-          const props = ['first', 'last']
-          return props.every( key => key in value )
-        }
-      },
-      city: {
-        default: '',
-        type: String
-      },
-      manualDate: {
-        default: '',
-        type: String
-      },
-      greeting: {
-        default: '',
-        type: String
-      },
-      headline: {
-        default: '',
-        type: String
-      },
-      paragraphs: {
-        default: null,
-        type: Array
-      },
-      farewell: {
-        default: '',
-        type: String
-      },
-      addLinesForSignature: {
-        default: false,
-        type: Boolean
-      },
+export default {
+  name: 'CoverletterText',
+  props: {
+    companyName: {
+      default: null,
+      type: Object,
+      validator: value => {
+        const props = ['speech', 'first', 'last']
+        return props.every(key => key in value)
+      }
     },
-    computed: {
-      date() {
-        if(!this.manualDate) {
-          const today = new Date()
-          let day = today.getDate()
-          let month = today.getMonth() + 1
-          let year = today.getFullYear()
-          if (day < 10) {
-            day = '0' + day
-          } 
-          if (month < 10) {
-            month = '0' + month
-          } 
-          return `${day}.${month}.${year}`
+    personName: {
+      default: null,
+      type: Object,
+      validator: value => {
+        const props = ['first', 'last']
+        return props.every(key => key in value)
+      }
+    },
+    city: {
+      default: '',
+      type: String
+    },
+    manualDate: {
+      default: '',
+      type: String
+    },
+    greeting: {
+      default: '',
+      type: String
+    },
+    headline: {
+      default: '',
+      type: String
+    },
+    paragraphs: {
+      default: null,
+      type: Array
+    },
+    farewell: {
+      default: '',
+      type: String
+    },
+    addLinesForSignature: {
+      default: false,
+      type: Boolean
+    }
+  },
+  computed: {
+    date() {
+      if (!this.manualDate) {
+        const today = new Date()
+        let day = today.getDate()
+        let month = today.getMonth() + 1
+        let year = today.getFullYear()
+        if (day < 10) {
+          day = '0' + day
         }
-        else {
-          return this.manualDate
+        if (month < 10) {
+          month = '0' + month
         }
+        return `${day}.${month}.${year}`
+      } else {
+        return this.manualDate
       }
     }
   }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -159,7 +158,7 @@ section {
   .text {
     margin: 0 0 $s 0;
   }
-  
+
   .signatureLines {
     margin: 0 0 ($s * 3) 0;
   }

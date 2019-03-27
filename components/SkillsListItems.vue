@@ -47,12 +47,12 @@ section {
       margin: 0;
       display: inline;
       &:after {
-        content: ",";
+        content: ',';
         margin: 0 $s-xxs 0 0;
       }
       &:last-child {
         &:after {
-          content: "";
+          content: '';
         }
       }
     }
