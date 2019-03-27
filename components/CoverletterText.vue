@@ -112,19 +112,17 @@ export default {
     date() {
       if (!this.manualDate) {
         const today = new Date()
-        let day = today.getDate()
-        let month = today.getMonth() + 1
+        let day = this.addTrailingNull(today.getDate())
+        let month = this.addTrailingNull(today.getMonth() + 1)
         let year = today.getFullYear()
-        if (day < 10) {
-          day = '0' + day
-        }
-        if (month < 10) {
-          month = '0' + month
-        }
         return `${day}.${month}.${year}`
-      } else {
-        return this.manualDate
       }
+      return this.manualDate
+    }
+  },
+  methods: {
+    addTrailingNull(number) {
+      return number < 10 ? `0${number}` : number
     }
   }
 }
