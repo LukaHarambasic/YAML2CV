@@ -114,8 +114,6 @@
           let day = today.getDate()
           let month = today.getMonth() + 1
           let year = today.getFullYear()
-          console.log('day ' + day)
-          console.log('month ' + month)
           if (day < 10) {
             day = '0' + day
           } 
