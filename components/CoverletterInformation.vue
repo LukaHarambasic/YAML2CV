@@ -33,6 +33,9 @@
     <div 
       class="city">
       <span 
+        v-if="address.zip" 
+        v-text="address.zip"/>
+      <span 
         v-if="address.city" 
         v-text="address.city"/>
     </div>
@@ -69,7 +72,7 @@
         default: null,
         type: Object,
         validator: (value) => {
-          const props = ['street', 'city', 'country']
+          const props = ['street', 'zip', 'city', 'country']
           return props.every( key => key in value )
         }
       }

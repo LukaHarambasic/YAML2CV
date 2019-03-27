@@ -6,7 +6,7 @@ addLinesForSignature: true
 # add image path, default is profile.jpg, leave empty if you don't want a logo (can be found in static)
 imagePath: profile.jpg
 # do you want a round image?
-isImageRound: true 
+isImageRound: false 
 # do you want this dots?
 useTimeline: true 
 # should the text justified?

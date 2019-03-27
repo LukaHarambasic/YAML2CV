@@ -8,5 +8,6 @@ name:
 #   - Germany
 address:
   street: Mustermannstr. 7
-  city: 67066 Oppau
+  zip: 67066
+  city: Oppau
   country: Germany
