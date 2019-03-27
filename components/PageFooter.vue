@@ -88,7 +88,7 @@ footer {
     border-radius: 50%;
     transition: all 0.7s ease;
     @media print {
-      right: $s * 2;
+      right: 0;
     }
     &:hover {
       transform: rotate(360deg);
