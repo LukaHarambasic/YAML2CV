@@ -5,55 +5,56 @@
       <span
         v-if="city"
         class="location"
-        v-text="city"/>
+        v-text="city"
+      />
       <span
         v-if="date"
         class="date"
-        v-text="date"/>
+        v-text="date"
+      />
     </div>
     <h2
       v-if="headline"
       class="headline"
-      v-text="headline"/>
+      v-text="headline"
+    />
     <div
       class="welcome">
-      <span
-        v-if="greeting"
-        class="greeting"
-        v-text="greeting"/>
-      <span
-        v-if="companyName.speech"
-        class="speech"
-        v-text="companyName.speech"/>
-      <span
-        v-if="companyName.last"
-        class="lastname"
-        v-text="companyName.last"/>
+      <span 
+        v-for="(item, key, index) in companyName"
+        :key="index"
+        :class="key"
+        v-text="item"
+      />
     </div>
     <div
       class="text">
       <p 
         v-for="(paragraph, index) in paragraphs" 
         :key="index"
-        v-html="paragraph"/>
+        v-html="paragraph"
+      />
     </div> 
     <div
       :class="{ signatureLines: addLinesForSignature }">
       <span
         v-if="farewell"
         class="farewell"
-        v-text="farewell"/>
+        v-text="farewell"
+      />
     </div>
     <div
       class="name">
       <span
         v-if="personName"
         class="firstname"
-        v-text="personName.first"/>
+        v-text="personName.first"
+      />
       <span
         v-if="personName"
         class="lastname"
-        v-text="personName.last"/>
+        v-text="personName.last"
+      />
     </div>
   </section>
 </template>

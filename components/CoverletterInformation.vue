@@ -4,46 +4,49 @@
       class="company">
       <span 
         v-if="title"
-        v-text="title"/>
+        v-text="title"
+      />
     </div>
     <div 
       class="department">
       <span 
         v-if="department"
-        v-text="department"/>
+        v-text="department"
+      />
     </div>
     <div 
       class="name">
       <span 
-        v-if="name.speech"
-        v-text="name.speech"/>
-      <span 
-        v-if="name.first"
-        v-text="name.first"/>
-      <span 
-        v-if="name.last" 
-        v-text="name.last"/>
+        v-for="(item, key, index) in name"
+        :key="index"
+        :class="key"
+        v-text="item"
+      />
     </div>
     <div 
       class="streetHousenumber">
       <span 
         v-if="address.street"
-        v-text="address.street"/>
+        v-text="address.street"
+      />
     </div>
     <div 
       class="city">
       <span 
         v-if="address.zip" 
-        v-text="address.zip"/>
+        v-text="address.zip"
+      />
       <span 
         v-if="address.city" 
-        v-text="address.city"/>
+        v-text="address.city"
+      />
     </div>
     <div 
       class="country">
       <span 
         v-if="address.country"
-        v-text="address.country"/>
+        v-text="address.country"
+      />
     </div>
   </address>
 </template>

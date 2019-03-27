@@ -5,7 +5,8 @@
     <img 
       v-if="logoPath"
       :src="logoPath"
-      class="logo">
+      class="logo"
+    >
     <ul 
       v-if="links">
       <li
@@ -14,7 +15,8 @@
         <a 
           :href="link.url" 
           :title="link.title"
-          v-text="link.title"/>
+          v-text="link.title"
+        />
       </li>
     </ul>
   </footer>

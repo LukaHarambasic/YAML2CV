@@ -1,8 +1,8 @@
 <template>
   <section>
     <base-headline
-      v-if="title"
-      :title="title"/>
+      :title="title"
+    />
     <ul 
       v-if="useTimeline">
       <segment-list-timeline-item
@@ -13,7 +13,8 @@
         :position="segment.position"
         :location="segment.location"
         :date="segment.date"
-        :justify-description="justifyDescription"/>
+        :justify-description="justifyDescription"
+      />
     </ul>
     <ul
       v-else>
@@ -25,7 +26,8 @@
         :position="segment.position"
         :location="segment.location"
         :date="segment.date"
-        :justify-description="justifyDescription"/>
+        :justify-description="justifyDescription"
+      />
     </ul>
   </section>
 </template>

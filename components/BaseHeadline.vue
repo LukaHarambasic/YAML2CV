@@ -1,7 +1,8 @@
 <template>
   <h2
     v-if="title"
-    v-text="title" />
+    v-text="title" 
+  />
 </template>
 
 <script>

@@ -1,7 +1,6 @@
 <template>
   <aside>
     <base-headline
-      v-if="title"
       :title="title"/>
     <div 
       v-if="showSkillLevel"> 
@@ -12,7 +11,8 @@
         :skills="list.skills"
         :sort-skills-by="sortSkillsBy"
         :max-skill-level="maxSkillLevel"
-        class="list"/>
+        class="list"
+      />
     </div>
     <div 
       v-else>
@@ -21,7 +21,8 @@
         :key="index"
         :title="list.title"
         :skills="list.skills"
-        class="list"/>
+        class="list"
+      />
     </div>
   </aside>
 </template>

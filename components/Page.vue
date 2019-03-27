@@ -6,7 +6,8 @@
     <page-footer
       :links="footerLinks"
       :is-first="isFirstCv"
-      :logo-path="logoPath"/>
+      :logo-path="logoPath"
+    />
   </div>
 </template>
 

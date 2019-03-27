@@ -2,17 +2,20 @@
   <section>
     <h3
       v-if="title"
-      v-text="title"/>
+      v-text="title"
+    />
     <ul>
       <li
         v-for="(skill, index) in sortedSkills"
         :key="index">
         <h4 
-          v-text="skill.title"/>
+          v-text="skill.title"
+        />
         <div class="bar">
           <div 
             :style="{ width: `${skillPercentage(skill.level)}%` }"
-            class="filled"/>
+            class="filled"
+          />
         </div>
       </li>
     </ul>

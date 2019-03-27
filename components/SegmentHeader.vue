@@ -8,8 +8,13 @@
       v-if="name"
       class="nameInformation">
       <h1>
-        <span v-text="name.first"/><br>
-        <span v-text="name.last"/>
+        <span 
+          v-text="name.first"
+        />
+        <br>
+        <span 
+          v-text="name.last"
+        />
       </h1>
       <div 
         v-if="information"
@@ -17,7 +22,8 @@
         <span 
           v-for="(point, index) in information" 
           :key="index" 
-          v-text="point"/>
+          v-text="point"
+        />
       </div>
     </div>
   </header>

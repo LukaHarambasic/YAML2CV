@@ -7,7 +7,8 @@
       :position="position"
       :location="location"
       :date="date"
-      :justify-description="justifyDescription"/>
+      :justify-description="justifyDescription"
+    />
   </div>
 </template>
 

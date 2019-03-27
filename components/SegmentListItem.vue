@@ -9,16 +9,19 @@
         <div
           v-if="date.from"
           class="from"
-          v-text="date.from"/>
+          v-text="date.from"
+        />
         <div
           v-if="date.to"
           class="to"
-          v-text="date.to"/>
+          v-text="date.to"
+        />
       </div>
       <div
         v-if="location"
         class="location"
-        v-text="location"/>
+        v-text="location"
+      />
     </div>
     <div
       v-if="title || position"
@@ -26,17 +29,20 @@
       <h3
         v-if="title"
         class="title"
-        v-text="title"/>
+        v-text="title"
+      />
       <h4
         v-if="position"
         class="position"
-        v-text="`(${position})`"/>
+        v-text="`(${position})`"
+      />
     </div>
     <p
       v-if="description"
       :class="{ justify: justifyDescription }"
       class="description"
-      v-html="description"/>
+      v-html="description"
+    />
   </li>
 </template>
 

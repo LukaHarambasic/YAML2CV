@@ -1,17 +1,11 @@
 <template>
   <header>
     <span 
-      v-if="address.street"
-      v-text="address.street" />
-    <span 
-      v-if="address.zip"
-      v-text="address.zip" />
-    <span 
-      v-if="address.city"
-      v-text="address.city" />
-    <span 
-      v-if="address.country"
-      v-text="address.country" />
+      v-for="(item, key, index) in address"
+      :key="index"
+      :class="key"
+      v-text="item"
+    />
   </header>
 </template>
 

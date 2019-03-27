@@ -4,13 +4,15 @@
       :logo-path="settings.logoPath"
       :footer-links="footer">
       <coverletter-header
-        :address="person.address"/>
+        :address="person.address"
+      />
       <coverletter-information
         :title="company.title"
         :department="company.department"
         :name="company.name"
         :address="company.address"
-        :contact="company.contact"/>
+        :contact="company.contact"
+      />
       <coverletter-text
         :company-name="company.name"
         :person-name="person.name"
@@ -20,7 +22,8 @@
         :headline="coverletter.headline"
         :paragraphs="coverletter.paragraphs"
         :farewell="coverletter.farewell"
-        :add-lines-for-signature="settings.addLinesForSignature"/>
+        :add-lines-for-signature="settings.addLinesForSignature"
+      />
     </page>
     <page
       :is-first-cv="true"
@@ -30,7 +33,8 @@
         :name="person.name"
         :information="person.information"
         :image-path="settings.imagePath"
-        :is-image-round="settings.isImageRound"/>
+        :is-image-round="settings.isImageRound"
+      />
       <div 
         class="main">
         <segment-list
@@ -38,13 +42,15 @@
           :title="education.title"
           :segments="education.segments"
           :use-timeline="settings.useTimeline"
-          :justify-description="settings.justifyDescription"/>
+          :justify-description="settings.justifyDescription"
+        />
         <segment-list
           v-if="experienceFirstPage"
           :title="experienceFirstPage.title"
           :segments="experienceFirstPage.segments"
           :use-timeline="settings.useTimeline"
-          :justify-description="settings.justifyDescription"/>
+          :justify-description="settings.justifyDescription"
+        />
       </div>
       <skills-list 
         v-if="skills"
@@ -53,7 +59,8 @@
         :show-skill-level="settings.showSkillLevel"
         :sort-skills-by="settings.showSkillsBy"
         :max-skill-level="settings.maxSkillLevel"
-        class="skills" />
+        class="skills"
+      />
     </page>
     <page
       :logo-path="settings.logoPath"
@@ -63,14 +70,16 @@
         :title="experienceSecondPage.title"
         :segments="experienceSecondPage.segments"
         :use-timeline="settings.useTimeline"
-        :justify-description="settings.justifyDescription"/>
+        :justify-description="settings.justifyDescription"
+      />
       <segment-list
         v-if="voluntary"
         :title="voluntary.title"
         :segments="voluntary.segments"
         :use-timeline="settings.useTimeline"
         :justify-description="settings.justifyDescription"
-        class="voluntary"/>
+        class="voluntary"
+      />
     </page>
   </section>
 </template>

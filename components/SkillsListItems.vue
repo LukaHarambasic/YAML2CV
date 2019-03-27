@@ -2,12 +2,14 @@
   <section>
     <h3
       v-if="title"
-      v-text="title"/>
+      v-text="title"
+    />
     <ul>
       <li
         v-for="skill in skills"
         :key="skill.title"
-        v-text="skill.title"/>
+        v-text="skill.title"
+      />
     </ul>
   </section>
 </template>
