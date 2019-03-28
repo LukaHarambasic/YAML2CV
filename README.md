@@ -1,13 +1,14 @@
 # YAML2CV
-[DEMO: https://yaml2cv.basichub.de/](https://yaml2cv.basichub.de/)
+[DEMO - Default](https://yaml2cv-demo.netlify.com/)
+[DEMO - High Tech Company](https://yaml2cv-demo.netlify.com/hightechcompany/)
 
 ---
 
 ## ToDos
 Do you want some new features? Create an issue :)
-- [ ] Hosted Version for easy only editing
 - [ ] LinkedIn Import
 - [ ] Generate pages and CVs automatically for each folder in content
+- [ ] Disable coverletter on production
 - [x] add field for address and telephone
 - [x] add new layout with: skill level, timeline
 - [x] add responsiveness
@@ -41,8 +42,8 @@ Do you want some new features? Create an issue :)
         import voluntary from '~/content/voluntary.yml'
         import footer from '~/content/footer.yml'
       ```
-    3. After that you can access this page by adding the file name to your url, in this example for the page `HighTechCompany.vue` add `/HighTechCompany` to your url to get `http://localhost:3000/HighTechCompany`.
-    4. So you have to repead this for each jobs/position.
+    1. After that you can access this page by adding the file name to your url, in this example for the page `HighTechCompany.vue` add `/HighTechCompany` to your url to get `http://localhost:3000/HighTechCompany`.
+    2. So you have to repead this for each jobs/position.
 3. Change the colors in `assets/scss/_settings.scss`, mainly the `$c-primary` color but you can change everything you want, but I suspect that it will destroy the layout.
 4. In the same file you can change the font but than you have to add the Google Font in the `nuxt.config.js` file (just replace the url you find there).
 
