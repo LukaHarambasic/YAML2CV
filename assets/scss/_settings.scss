@@ -5,7 +5,7 @@
  */
 
 /*
-* Sizes (s)
+  * Sizes (s)
 * Sizing has 4 properties: xs, s, l, xl; if no no size is applied it would be a m and it is the default value.
  */
 $s-xxs: 0.25rem;
@@ -20,12 +20,10 @@ $s-page-width: 210mm;
 $s-page-height: 297mm;
 
 /*
-* Fonts
+ * Fonts
  */
-//font family (ff)
-$ff: 'Roboto', sans-serif;
+$ff: 'Roboto', sans-serif; // if you change this to another Font from https://fonts.google.com/ you also have to change this in the nuxt.config.js
 
-//font size (fs)
 $fs-xs: $s-xs;
 $fs-s:  $s-s;
 $fs:    $s;
@@ -34,7 +32,7 @@ $fs-l:  $s-l;
 $fs-xl: $s-xl * 2;
 
 /*
-* Colors (c)
+ * Colors (c)
  */
 $c-primary:        #2E2E3E;
 $c-font-headline:    $c-primary;
@@ -47,13 +45,11 @@ $c-grey:           #cccccc;
 $c-black:          #000000;
 
 /*
-* Breakpoints
+ * Breakpoints
  */
 $desktop: $s * 62;
-$tablet:  $s * 36;
-$mobile:  $s * 24;
 
 /*
-* Border-Radius
+ * Border-Radius
  */
 $radius: 4px;
