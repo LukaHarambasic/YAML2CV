@@ -9,7 +9,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'Luka Harambasic',
+    title: 'Your CV',
     meta: [
       { charset: 'utf-8' },
       {
