@@ -1,6 +1,5 @@
 const pkg = require('./package')
 const fs = require('fs')
-const fm = require('front-matter')
 
 module.exports = {
   mode: 'universal',

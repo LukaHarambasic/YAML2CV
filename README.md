@@ -11,6 +11,7 @@ Do you want some new features? Create an issue :)
 - [ ] LinkedIn Import
 - [ ] Generate pages and CVs automatically for each folder in content
 - [ ] Disable coverletter on production
+- [ ] Overflow warning for pages
 - [x] add field for address and telephone
 - [x] add new layout with: skill level, timeline
 - [x] add responsiveness
