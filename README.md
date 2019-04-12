@@ -17,6 +17,9 @@ Do you want some new features? Create an issue :)
 - [x] add responsiveness
 - [x] explain how to add new informations
 
+## Known issues
+- [ ] two elements of education/experience/voluntary could be on the same line if there isn't enough conntent. Quick fix, add as many invisivble characters (not spaces) until it looks normal. You can copy it from: https://stackoverflow.com/questions/17978720/invisible-characters-ascii?answertab=votes#tab-top
+
 ---
 
 ## Customize the CV
