@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "nuxt-static",
+  "name": "YAML2CV",
   "builds": [
       { "src": "package.json", "use": "@now/static-build" }
   ]
