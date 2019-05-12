@@ -4,9 +4,8 @@ const fs = require('fs')
 module.exports = {
   mode: 'universal',
 
-  /*
-  ** Headers of the page
-  */
+  rootDir: __dirname,
+
   head: {
     title: 'Your CV',
     meta: [

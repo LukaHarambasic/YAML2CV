@@ -1,0 +1,25 @@
+version: "3.6"
+services:
+  yaml2cv:
+    container_name: yaml2cv
+    image: yaml2cv:latest
+    command: pm2-runtime start ecosystem.config.js
+    environment:
+      HOST: "0.0.0.0"
+    networks:
+      - webnet
+
+  yaml2cv-nginx:
+    image: nginx:latest
+    container_name: yaml2cv-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    depends_on:
+      - yaml2cv
+    networks:
+      - webnet
+
+networks:
+  webnet:

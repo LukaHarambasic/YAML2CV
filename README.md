@@ -83,6 +83,18 @@ Do you want some new features? Create an issue :)
 1. `npm run build`
 2. `npm run start`
 
+### Run on docker
+1. `$ docker build -t yaml2cv --build-arg NODE_ENV=production .`
+2. `$ docker-compose up -d`
+
+#### Checking on docker
+1. move to the container
+    1. `docker exec -it yaml2cv bash`
+    2. `pm2 monit`
+    3. `pm2 list`
+    4. `pm2 stop app`
+    5. `pm2 restart app`
+
 ### Generate static HTML
 1. `npm run generate`
 2. Copy the files from the `dist` folder to your webserver
