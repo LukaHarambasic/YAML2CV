@@ -20,10 +20,12 @@
     />
     <div
       class="welcome">
-      <span 
+      <span
+        v-text="greeting"
+      />
+      <span
         v-for="(item, key, index) in companyName"
         :key="index"
-        :class="key"
         v-text="item"
       />
     </div>
@@ -160,7 +162,6 @@ section {
   .text {
     margin: 0 0 $s 0;
   }
-
   .signatureLines {
     margin: 0 0 ($s * 3) 0;
   }
