@@ -1,6 +1,6 @@
-> ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+> ⚠️⚠️⚠️ 
 > __This Repo won't be continued, you can find the successor at [LukaHarambasic/vue-resume-component](https://github.com/LukaHarambasic/vue-resume-component).__
-> ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+>  ⚠️⚠️⚠️
 
 # YAML2CV
 
